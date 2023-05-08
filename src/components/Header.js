@@ -1,10 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 
 const Header = () => {
   return (
     <header>
+      {/* top header */}
       <div className="header-top-strip py-3">
         <div className="container-xxl">
           <div className="row">
@@ -24,6 +25,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+      {/* midle header */}
       <div className="header-upper py-3">
         <div className="container-xxl">
           <div className="row align-items-center">
@@ -82,6 +84,53 @@ const Header = () => {
                     </div>
                     <p className="mb-0">$0.00</p>
                   </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* bottom header */}
+      <div className="header-bottom py-3">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <div className="menu-bottom d-flex align-items-center gap-30">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle bg-transparent border-0"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img src="images/menu.svg" alt="" />
+                    <span className="mx-5 d-inline-block">Shop Categories</span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <Link to="/" class="dropdown-item" href="#s">
+                        Action
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/" class="dropdown-item" href="#s">
+                        Another action
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/" class="dropdown-item" href="#s">
+                        Something else here
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="menu-links">
+                  <div className="d-flex align-items-center gap-30">
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/store">Our Store</NavLink>
+                    <NavLink to="/blog">Blog</NavLink>
+                    <NavLink to="/contact">Contact</NavLink>
+                  </div>
                 </div>
               </div>
             </div>
