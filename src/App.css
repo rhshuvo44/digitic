@@ -45,6 +45,11 @@ a {
   width: 35px;
   height: 35px;
 }
+.header-upper .header-upper-links p {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+}
 .header-bottom {
   background: var(--color-232f3e);
 }
@@ -64,7 +69,7 @@ a {
 .header-bottom .dropdown .dropdown-menu {
   background: var(--color-131921);
   width: 100%;
-  transform: translate3d(0px, 57px, 0px);
+  transform: translate3d(0px, 57px, 0px) !important;
 }
 .header-bottom .dropdown .dropdown-item {
   color: #fff;
@@ -76,5 +81,42 @@ a {
 }
 .header-bottom .dropdown .dropdown-item:hover {
   background: transparent;
+  color: var(--color-febd69) !important;
+}
+/* Header Part End  */
+
+/* Footer Part start  */
+footer {
+  background: var(--color-232f3e);
+}
+footer h4 {
+  font-size: 18px;
+  line-height: 25px;
+}
+footer .footer-links a,
+footer address {
+  font-size: 13px;
+  line-height: 25px;
+  transition: all 0.5s;
+  color: #fff;
+}
+footer .footer-links a:hover {
   color: var(--color-febd69);
 }
+footer:not(:first-child) {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+footer .input-group-text {
+  background: var(--color-232f3e);
+  color: white;
+  /* padding: 8px 11px; */
+  text-transform: uppercase;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.5;
+}
+footer .input-group-text:hover {
+  background: var(--color-febd69);
+}
+/* Footer Part End  */
