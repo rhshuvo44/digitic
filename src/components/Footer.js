@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import {
+  BsFacebook,
+  BsGithub,
+  BsInstagram,
+  BsLinkedin,
+  BsYoutube,
+} from "react-icons/bs";
 const Footer = () => {
   return (
     <>
-      <footer className="py-4">
+      <footer className="py-5">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-5">
@@ -30,7 +36,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <footer className="py-3">
+      <footer className="py-5">
         <div className="container-xxl">
           <div className="row">
             <div className="col-4">
@@ -43,16 +49,53 @@ const Footer = () => {
                 </address>
                 <a
                   href="tel:+880123456987"
-                  className="mt-4 d-block mb-2 text-white"
+                  className="mt-4 d-block mb-1 text-white"
                 >
                   +880123456987
                 </a>
                 <a
                   href="mailto:demo@demo.com"
-                  className="mt-4 d-block mb-2 text-white"
+                  className=" d-block mb-4 text-white"
                 >
                   demo@demo.com
                 </a>
+                <div className="social-icons d-flex align-items-center gap-15">
+                  <a
+                    href="http://ddddd"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <BsLinkedin />
+                  </a>
+                  <a
+                    href="http://ddddd"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <BsYoutube />
+                  </a>
+                  <a
+                    href="http://ddddd"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <BsGithub />
+                  </a>
+                  <a
+                    href="http://ddddd"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <BsFacebook />
+                  </a>
+                  <a
+                    href="http://ddddd"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <BsInstagram />
+                  </a>
+                </div>
               </div>
             </div>
             <div className="col-3">
