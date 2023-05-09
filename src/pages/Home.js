@@ -77,6 +77,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className="py-5">
+        
+      </section>
     </>
   );
 };

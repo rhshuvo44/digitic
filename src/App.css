@@ -51,9 +51,14 @@ a {
 .header-upper {
   background: var(--color-131921);
 }
-
+.header-upper h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
 .header-upper .input-group-text {
   background: var(--color-febd69);
+  cursor: pointer;
 }
 .header-upper .header-upper-links img {
   width: 35px;
@@ -76,7 +81,6 @@ a {
   letter-spacing: 0.3;
   text-transform: uppercase;
 }
-
 .header-bottom .dropdown button:focus {
   box-shadow: none;
 }
