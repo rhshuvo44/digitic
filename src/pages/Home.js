@@ -126,29 +126,57 @@ const Home = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
-              <div className="categories d-flex gap-30 justify-content-between align-items-center">
-                <div className="d-flex gap-30 align-items-center">
+              <div className="categories d-flex flex-wrap justify-content-between align-items-center">
+                <div className="d-flex  align-items-center">
                   <div>
                     <h6>cameras</h6>
                     <p>10 Items</p>
                   </div>
                   <img src="images/camera.jpg" alt="" />
                 </div>
-                <div className="d-flex gap-30 align-items-center">
+                <div className="d-flex  align-items-center">
                   <div>
                     <h6>cameras</h6>
                     <p>10 Items</p>
                   </div>
                   <img src="images/camera.jpg" alt="" />
                 </div>
-                <div className="d-flex gap-30 align-items-center">
+                <div className="d-flex  align-items-center">
                   <div>
                     <h6>cameras</h6>
                     <p>10 Items</p>
                   </div>
                   <img src="images/camera.jpg" alt="" />
                 </div>
-                <div className="d-flex gap-30 align-items-center">
+                <div className="d-flex  align-items-center">
+                  <div>
+                    <h6>cameras</h6>
+                    <p>10 Items</p>
+                  </div>
+                  <img src="images/camera.jpg" alt="" />
+                </div>
+                <div className="d-flex  align-items-center">
+                  <div>
+                    <h6>cameras</h6>
+                    <p>10 Items</p>
+                  </div>
+                  <img src="images/camera.jpg" alt="" />
+                </div>
+                <div className="d-flex  align-items-center">
+                  <div>
+                    <h6>cameras</h6>
+                    <p>10 Items</p>
+                  </div>
+                  <img src="images/camera.jpg" alt="" />
+                </div>
+                <div className="d-flex  align-items-center">
+                  <div>
+                    <h6>cameras</h6>
+                    <p>10 Items</p>
+                  </div>
+                  <img src="images/camera.jpg" alt="" />
+                </div>
+                <div className="d-flex  align-items-center">
                   <div>
                     <h6>cameras</h6>
                     <p>10 Items</p>
