@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Marquee from "react-fast-marquee";
 const Home = () => {
   return (
     <>
@@ -126,7 +126,7 @@ const Home = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
-              <div className="categories d-flex flex-wrap justify-content-between align-items-center">
+              <div className="categories d-flex flex-wrap justify-content-between align-items-center card-wrraper">
                 <div className="d-flex  align-items-center">
                   <div>
                     <h6>cameras</h6>
@@ -183,6 +183,42 @@ const Home = () => {
                   </div>
                   <img src="images/camera.jpg" alt="" />
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="marquee py-5">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <div className="marquee-inner-wrraper card-wrraper">
+                <Marquee className="d-flex">
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-01.png" alt="brand" />
+                  </div>
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-02.png" alt="brand" />
+                  </div>
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-03.png" alt="brand" />
+                  </div>
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-04.png" alt="brand" />
+                  </div>
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-05.png" alt="brand" />
+                  </div>
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-06.png" alt="brand" />
+                  </div>
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-07.png" alt="brand" />
+                  </div>
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-08.png" alt="brand" />
+                  </div>
+                </Marquee>
               </div>
             </div>
           </div>

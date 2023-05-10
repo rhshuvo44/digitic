@@ -45,7 +45,12 @@ a {
   background: var(--color-febd69);
   color: var(--color-131921);
 }
-/* header part  */
+.card-wrraper {
+  background: white;
+  box-shadow: 0 0 10px #0000001a;
+  padding: 15px;
+}
+/*======================== header part ========================= */
 .header-top-strip {
   background: var(--color-131921);
   border: 1px solid var(--color-3b4149);
@@ -103,9 +108,9 @@ a {
   background: transparent;
   color: var(--color-febd69) !important;
 }
-/* Header Part End  */
+/* =================Header Part End  ====================*/
 
-/* Footer Part start  */
+/* =================Footer Part start  ==================*/
 footer {
   background: var(--color-232f3e);
 }
@@ -147,9 +152,9 @@ footer .input-group-text {
 footer .input-group-text:hover {
   background: var(--color-febd69);
 }
-/* Footer Part End  */
+/* ================Footer Part End  =============*/
 
-/* home pages  */
+/* ==============home pages  =============*/
 .main-banner-content {
   top: 15%;
   left: 5%;
@@ -205,16 +210,12 @@ footer .input-group-text:hover {
   letter-spacing: 0.4;
   color: var(--color-131921);
 }
-/* home-wrraper-2 */
+/* ============== home-wrraper-2 ================*/
 .home-wrraper-2 {
   background: var(--color-f5f5f7);
 }
 /* categories */
-.categories {
-  background: white;
-  box-shadow: 0 0 10px #0000001a;
-  padding: 15px;
-}
+
 .categories > div {
   width: 25%;
   padding: 10px 10px 10px 20px;
@@ -237,5 +238,11 @@ footer .input-group-text:hover {
   border-right: 1px solid var(--color-ededed);
 }
 /* categories end */
-/* home-wrraper-2 end */
+
+/* =============home-wrraper-2 end ================*/
+
+/* =============marquee ================== */
+
+/* ================marquee end============== */
+
 /* home pages end  */
