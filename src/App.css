@@ -12,6 +12,7 @@
   --color-f5f5f7: #f5f5f7;
   --color-ededed: #ededed;
   --color-777777: #777777;
+  --color-1c1c1b: #1c1c1b;
 }
 body {
   font-family: "Rubik", sans-serif;
@@ -282,3 +283,53 @@ footer .input-group-text:hover {
   color: var(--color-777777);
 }
 /* ================BLog end============== */
+
+/* ================Product ============== */
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.product-card .product-img {
+  height: 270px;
+}
+.product-card .product-img img {
+  object-fit: contain;
+}
+.product-card .product-img > img:last-child {
+  display: none;
+}
+.product-card:hover .product-img > img:nth-child(1) {
+  display: none;
+}
+.product-card:hover .product-img > img:last-child {
+  display: block;
+}
+
+.product-card:hover .action-bar {
+  right: 10px;
+}
+.product-card .product-details h6 {
+  color: var(--color-bf4800);
+  font-style: 13px;
+}
+.product-card .product-details h5 {
+  color: var(--color-1c1c1b);
+  font-style: 15px;
+}
+.product-card .product-details p.price {
+  color: var(--color-1c1c1b);
+  font-style: 16px;
+}
+.wishlist-icon {
+  top: 3%;
+  right: 10px;
+}
+.action-bar {
+  top: 10%;
+  right: -23px;
+  transition: all 0.3s;
+}
+
+/* ================Product end============== */
