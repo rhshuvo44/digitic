@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import BlogCard from "../components/BlogCard";
 import ProductCard from "../components/ProductCard";
+import SpecialProduct from "../components/SpecialProduct";
 const Home = () => {
   return (
     <>
-      <section className="home-wrraper-1 py-5">
+      <section className="home-wrapper-1 py-5">
         <div className="container-xxl">
           <div className="row">
             <div className="col-6">
@@ -79,7 +80,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="home-wrraper-2 py-5">
+      <section className="home-wrapper-2 py-5">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
@@ -124,11 +125,11 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="home-wrraper-2 py-5">
+      <section className="home-wrapper-2 py-5">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
-              <div className="categories d-flex flex-wrap justify-content-between align-items-center card-wrraper">
+              <div className="categories d-flex flex-wrap justify-content-between align-items-center card-wrapper">
                 <div className="d-flex  align-items-center">
                   <div>
                     <h6>cameras</h6>
@@ -190,7 +191,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="featured-wrraper py-5 home-wrraper-2">
+      <section className="featured-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
@@ -203,21 +204,117 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="special-wrraper py-5 home-wrraper-2">
+      <section className="famous-wrapper py-5 home-wrapper-2">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-3">
+              <div className="famous-card position-relative">
+                <img
+                  src="images/subbanner-01.jpg"
+                  className="img-fluid"
+                  alt=""
+                />
+                <div className="famous-card-content position-absolute">
+                  <h5>Big Screen</h5>
+                  <h6>Smart Watch Series 7</h6>
+                  <p>From $999 or $16.62/mo. for 24 mo.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="famous-card position-relative">
+                <img
+                  src="images/subbanner-02.jpg"
+                  className="img-fluid"
+                  alt=""
+                />
+                <div className="famous-card-content position-absolute">
+                  <h5 className="text-dark">Big Screen</h5>
+                  <h6 className="text-dark">Smart Watch Series 7</h6>
+                  <p className="text-dark">
+                    From $999 or $16.62/mo. for 24 mo.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="famous-card position-relative">
+                <img
+                  src="images/subbanner-03.jpg"
+                  className="img-fluid"
+                  alt=""
+                />
+                <div className="famous-card-content position-absolute">
+                  <h5 className="text-dark">Big Screen</h5>
+                  <h6 className="text-dark">Smart Watch Series 7</h6>
+                  <p className="text-dark">
+                    From $999 or $16.62/mo. for 24 mo.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="famous-card position-relative">
+                <img
+                  src="images/subbanner-04.jpg"
+                  className="img-fluid"
+                  alt=""
+                />
+                <div className="famous-card-content position-absolute">
+                  <h5 className="text-dark">Big Screen</h5>
+                  <h6 className="text-dark">Smart Watch Series 7</h6>
+                  <p className="text-dark">
+                    From $999 or $16.62/mo. for 24 mo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="special-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
               <h2 className="section-heading">Special Products</h2>
             </div>
-            
+          </div>
+          <div className="row">
+            <SpecialProduct />
+            <SpecialProduct />
+            <SpecialProduct />
+            <SpecialProduct />
           </div>
         </div>
       </section>
-      <section className="marquee py-5 home-wrraper-2">
+      <section className="popular-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
-              <div className="marquee-inner-wrraper card-wrraper">
+              <h2 className="section-heading">Our Popular Products</h2>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-4">
+              <div className="card"></div>
+              <div className="card"></div>
+            </div>
+            <div className="col-8">
+              <div className="row">
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="marquee py-5 home-wrapper-2">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <div className="marquee-inner-wrapper card-wrapper">
                 <Marquee className="d-flex">
                   <div className="mx-4 w-25">
                     <img src="images/brand-01.png" alt="brand" />
@@ -249,7 +346,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="blog-wrraper py-5 home-wrraper-2">
+      <section className="blog-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">

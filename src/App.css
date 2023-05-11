@@ -47,7 +47,7 @@ a {
   background: var(--color-febd69);
   color: var(--color-131921);
 }
-.card-wrraper {
+.card-wrapper {
   background: white;
   box-shadow: 0 0 10px #0000001a;
   padding: 15px;
@@ -219,7 +219,7 @@ footer .input-group-text:hover {
   color: var(--color-131921);
 }
 /* ============== home-wrraper-2 ================*/
-.home-wrraper-2 {
+.home-wrapper-2 {
   background: var(--color-f5f5f7);
 }
 /* categories */
@@ -284,7 +284,7 @@ footer .input-group-text:hover {
 }
 /* ================BLog end============== */
 
-/* ================Product ============== */
+/* ================Featured Collection ============== */
 .product-card {
   background: white;
   padding: 15px;
@@ -331,5 +331,47 @@ footer .input-group-text:hover {
   right: -23px;
   transition: all 0.3s;
 }
+/* ================Featured Collection end============== */
 
-/* ================Product end============== */
+/* ================Special Products ============== */
+
+.special-product-card {
+  padding: 20px 10px;
+  border-radius: 10px;
+  background: white;
+}
+.special-product-card .badge {
+  background: #ef3939 !important;
+}
+/* ================Special Products end============== */
+/* ================famous Products ============== */
+
+.famous-card .famous-card-content {
+  top: 10%;
+  left: 10%;
+}
+.famous-card img {
+  border-radius: 10px;
+}
+
+.famous-card .famous-card-content h5 {
+  color: white;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 7px;
+}
+.famous-card .famous-card-content h6 {
+  color: white;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.famous-card .famous-card-content p {
+  color: white;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 100;
+}
+
+/* ================famous Products end============== */
