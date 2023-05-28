@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import StarRatingComponent from "react-star-rating-component";
+
 const ProductCard = () => {
   return (
     <div className="col-3">

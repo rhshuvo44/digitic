@@ -101,19 +101,19 @@ const Footer = () => {
             <div className="col-3">
               <h4 className="text-white mb-4">Information</h4>
               <div className="footer-links d-flex flex-column">
-                <Link className=" py-1 mb-1" to="/laptop">
+                <Link className=" py-1 mb-1" to="/privacy-policy">
                   Privacy policy
                 </Link>
-                <Link className=" py-1 mb-1" to="/laptop">
+                <Link className=" py-1 mb-1" to="/refund-policy">
                   Refund policy
                 </Link>
-                <Link className=" py-1 mb-1" to="/laptop">
+                <Link className=" py-1 mb-1" to="/shipping-policy">
                   Shipping policy
                 </Link>
-                <Link className=" py-1 mb-1" to="/laptop">
+                <Link className=" py-1 mb-1" to="/terms">
                   Terms of service
                 </Link>
-                <Link className=" py-1 mb-1" to="/laptop">
+                <Link className=" py-1 mb-1" to="/blog">
                   Blogs
                 </Link>
               </div>
@@ -121,19 +121,19 @@ const Footer = () => {
             <div className="col-3">
               <h4 className="text-white mb-4">Account</h4>
               <div className="footer-links d-flex flex-column">
-                <Link className=" py-1 mb-1" to="/laptop">
+                <Link className=" py-1 mb-1" to="/search">
                   Search
                 </Link>
-                <Link className=" py-1 mb-1" to="/laptop">
+                <Link className=" py-1 mb-1" to="/about">
                   About us
                 </Link>
-                <Link className=" py-1 mb-1" to="/laptop">
+                <Link className=" py-1 mb-1" to="/faq">
                   Faq
                 </Link>
-                <Link className=" py-1 mb-1" to="/laptop">
+                <Link className=" py-1 mb-1" to="/contact">
                   Contact
                 </Link>
-                <Link className=" py-1 mb-1" to="/laptop">
+                <Link className=" py-1 mb-1" to="/size">
                   Size chart
                 </Link>
               </div>
@@ -141,19 +141,19 @@ const Footer = () => {
             <div className="col-2">
               <h4 className="text-white mb-4">Quick Links</h4>
               <div className="footer-links d-flex flex-column">
-                <Link className=" py-1 mb-1" to="/laptop">
+                <Link className=" py-1 mb-1" to="/accessories">
                   Accessories
                 </Link>
                 <Link className=" py-1 mb-1" to="/laptop">
                   Laptops
                 </Link>
-                <Link className=" py-1 mb-1" to="/laptop">
+                <Link className=" py-1 mb-1" to="/headphones">
                   headphones
                 </Link>
-                <Link className=" py-1 mb-1" to="/laptop">
+                <Link className=" py-1 mb-1" to="/smart-watches">
                   smart watches
                 </Link>
-                <Link className="py-1 mb-1" to="/laptop">
+                <Link className="py-1 mb-1" to="/tablets">
                   tablets
                 </Link>
               </div>
