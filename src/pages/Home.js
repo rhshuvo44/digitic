@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
 import BlogCard from "../components/BlogCard";
 import ProductCard from "../components/ProductCard";
 import SpecialProduct from "../components/SpecialProduct";
@@ -80,6 +80,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="home-wrapper-2 py-5">
         <div className="container-xxl">
           <div className="row">
@@ -125,6 +126,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="home-wrapper-2 py-5">
         <div className="container-xxl">
           <div className="row">
@@ -191,6 +193,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="featured-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
@@ -204,6 +207,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="famous-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
@@ -272,6 +276,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="special-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
@@ -287,6 +292,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="popular-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
@@ -310,6 +316,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="marquee py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
@@ -346,6 +353,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="blog-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">

@@ -5,7 +5,7 @@ import StarRatingComponent from "react-star-rating-component";
 const ProductCard = () => {
   return (
     <div className="col-3">
-      <Link className="product-card position-relative">
+      <Link to="/single" className="product-card position-relative">
         <div className="wishlist-icon position-absolute">
           <Link>
             <img src="images/wish.svg" alt="" />

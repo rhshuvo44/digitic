@@ -6,7 +6,7 @@ const BlogCard = () => {
     <div className="col-3">
       <div className="blog-card">
         <div className="card-image">
-          <img src="images/blog-1.jpg" className="img-fluid" alt="" />
+          <img src="images/blog-1.jpg" className="img-fluid" alt="blog" />
         </div>
         <div className="blog-content">
           <p className="date">1 Dec, 2022</p>
@@ -15,7 +15,7 @@ const BlogCard = () => {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
             deleniti.
           </p>
-          <Link to="/" className="button">
+          <Link to="/read" className="button">
             Read More
           </Link>
         </div>
