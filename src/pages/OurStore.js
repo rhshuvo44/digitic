@@ -3,9 +3,9 @@ import BrandCrumb from "../components/BrandCrumb";
 
 const OurStore = () => {
   return (
-    <div>
-      <BrandCrumb title="store" />
-    </div>
+    <>
+      <BrandCrumb title="Our Store" />
+    </>
   );
 };
 
