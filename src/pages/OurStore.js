@@ -33,7 +33,7 @@ const OurStore = () => {
                       value="stock"
                       id="stock"
                     />
-                    <label className="form-check-label" for="stock">
+                    <label className="form-check-label" htmlFor="stock">
                       In stock (21)
                     </label>
                   </div>
@@ -44,7 +44,7 @@ const OurStore = () => {
                       value="stockOut"
                       id="stockOut"
                     />
-                    <label className="form-check-label" for="stockOut">
+                    <label className="form-check-label" htmlFor="stockOut">
                       Out of stock (0)
                     </label>
                   </div>

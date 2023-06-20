@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
-  BsFacebook,
-  BsGithub,
-  BsInstagram,
-  BsLinkedin,
-  BsYoutube,
+    BsFacebook,
+    BsGithub,
+    BsInstagram,
+    BsLinkedin,
+    BsYoutube,
 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
@@ -20,15 +20,15 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-7">
-              <div class="input-group">
+              <div className="input-group">
                 <input
                   type="search"
-                  class="form-control py-1"
+                  className="form-control py-1"
                   placeholder="Enter Your Email"
                   aria-label="Enter Your Email"
                   aria-describedby="newsletter"
                 />
-                <span class="input-group-text p-2" id="newsletter">
+                <span className="input-group-text p-2" id="newsletter">
                   Subscript
                 </span>
               </div>

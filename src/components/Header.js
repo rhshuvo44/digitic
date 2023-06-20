@@ -1,6 +1,6 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -37,15 +37,15 @@ const Header = () => {
               </h1>
             </div>
             <div className="col-5">
-              <div class="input-group">
+              <div className="input-group">
                 <input
                   type="search"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Search Product Here..."
                   aria-label="Search Product Here..."
                   aria-describedby="search-product"
                 />
-                <span class="input-group-text p-3" id="search-product">
+                <span className="input-group-text p-3" id="search-product">
                   <BsSearch className="fs-6" />
                 </span>
               </div>
@@ -96,9 +96,9 @@ const Header = () => {
           <div className="row">
             <div className="col-12">
               <div className="menu-bottom d-flex align-items-center gap-30">
-                <div class="dropdown">
+                <div className="dropdown">
                   <button
-                    class="btn btn-secondary dropdown-toggle bg-transparent border-0"
+                    className="btn btn-secondary dropdown-toggle bg-transparent border-0"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -106,19 +106,19 @@ const Header = () => {
                     <img src="images/menu.svg" alt="" />
                     <span className="mx-5 d-inline-block">Shop Categories</span>
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul className="dropdown-menu">
                     <li>
-                      <Link to="/" class="dropdown-item" href="#s">
+                      <Link to="/" className="dropdown-item" href="#s">
                         Action
                       </Link>
                     </li>
                     <li>
-                      <Link to="/" class="dropdown-item" href="#s">
+                      <Link to="/" className="dropdown-item" href="#s">
                         Another action
                       </Link>
                     </li>
                     <li>
-                      <Link to="/" class="dropdown-item" href="#s">
+                      <Link to="/" className="dropdown-item" href="#s">
                         Something else here
                       </Link>
                     </li>
