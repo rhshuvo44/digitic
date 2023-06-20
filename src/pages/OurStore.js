@@ -77,7 +77,6 @@ const OurStore = () => {
 
                 <div>
                   <h5 className="sub-title">Color</h5>
-
                   <ul className="colors">
                     <li></li>
                     <li></li>
@@ -96,6 +95,63 @@ const OurStore = () => {
 
                 <div>
                   <h5 className="sub-title">Size</h5>
+                  <div>
+                    <div className="form-check">
+                      <input
+                        className="form-check-input"
+                        type="checkbox"
+                        value="stock"
+                        id="stock"
+                      />
+                      <label className="form-check-label" htmlFor="stock">
+                        S (21)
+                      </label>
+                    </div>
+                    <div className="form-check">
+                      <input
+                        className="form-check-input"
+                        type="checkbox"
+                        value="stock"
+                        id="stock"
+                      />
+                      <label className="form-check-label" htmlFor="stock">
+                        M (2)
+                      </label>
+                    </div>
+                    <div className="form-check">
+                      <input
+                        className="form-check-input"
+                        type="checkbox"
+                        value="stock"
+                        id="stock"
+                      />
+                      <label className="form-check-label" htmlFor="stock">
+                        L (2)
+                      </label>
+                    </div>
+                    <div className="form-check">
+                      <input
+                        className="form-check-input"
+                        type="checkbox"
+                        value="stock"
+                        id="stock"
+                      />
+                      <label className="form-check-label" htmlFor="stock">
+                        XL (2)
+                      </label>
+                    </div>
+                    <div className="form-check">
+                      <input
+                        className="form-check-input"
+                        type="checkbox"
+                        value="stock"
+                        id="stock"
+                      />
+                      <label className="form-check-label" htmlFor="stock">
+                        XXL (2)
+                      </label>
+                    </div>
+                  </div>
                 </div>
               </div>
 
