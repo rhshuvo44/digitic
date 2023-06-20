@@ -22,6 +22,7 @@ const OurStore = () => {
                   </ul>
                 </div>
               </div>
+
               <div className="filter-card mb-3">
                 <h3 className="filter-title">Filter By </h3>
                 <div className="mt-4">
@@ -49,19 +50,59 @@ const OurStore = () => {
                     </label>
                   </div>
                 </div>
+
                 <div className="mt-3">
                   <h5 className="sub-title">Price</h5>
+                  <div className="d-flex align-items-center gap-10">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="From"
+                      />
+                      <label for="floatingInput">From</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="floatingInput1"
+                        placeholder="To"
+                      />
+                      <label for="floatingInput1">To</label>
+                    </div>
+                  </div>
                 </div>
+
                 <div>
                   <h5 className="sub-title">Color</h5>
+
+                  <ul className="colors">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
                 </div>
+
                 <div>
                   <h5 className="sub-title">Size</h5>
                 </div>
               </div>
+
               <div className="filter-card mb-3">
                 <h3 className="filter-title">Product Tags</h3>
               </div>
+
               <div className="filter-card mb-3">
                 <h3 className="filter-title">Random Product</h3>
               </div>

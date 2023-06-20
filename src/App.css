@@ -414,4 +414,26 @@ footer .input-group-text:hover {
   line-height: 28px;
 }
 
+.filter-card .form-floating > label {
+  font-size: 12px;
+}
+.filter-card .form-control {
+  height: 40px;
+}
+.filter-card .form-control:focus {
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+.colors {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.colors li {
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
 /* ================Our Store end============== */
