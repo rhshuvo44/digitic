@@ -21,7 +21,7 @@ const ProductCard = () => {
           <StarRatingComponent
             starCount={5}
             edit={false}
-            value="3"
+            value={3}
             activeColor="#ffd700"
           />
           <p className="price">$100.00</p>

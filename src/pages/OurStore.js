@@ -1,6 +1,7 @@
 import React from "react";
 import BrandCrumb from "../components/BrandCrumb";
 import Meta from "../components/Meta";
+import StarRatingComponent from "react-star-rating-component";
 
 const OurStore = () => {
   return (
@@ -57,7 +58,7 @@ const OurStore = () => {
                     <div class="form-floating mb-3">
                       <input
                         type="number"
-                        class="form-control"
+                        class="form-control bg-light"
                         id="floatingInput"
                         placeholder="From"
                       />
@@ -66,7 +67,7 @@ const OurStore = () => {
                     <div class="form-floating mb-3">
                       <input
                         type="number"
-                        class="form-control"
+                        class="form-control bg-light"
                         id="floatingInput1"
                         placeholder="To"
                       />
@@ -156,11 +157,68 @@ const OurStore = () => {
               </div>
 
               <div className="filter-card mb-3">
-                <h3 className="filter-title">Product Tags</h3>
+                <h3 className="filter-title mb-3">Product Tags</h3>
+                <div className="product-tags d-flex flex-wrap align-items-center gap-10">
+                  <span className="badge bg-light text-secondary rounded-3 py-2 px-3">
+                    Headphone
+                  </span>
+                  <span className="badge bg-light text-secondary rounded-3 py-2 px-3">
+                    Laptop
+                  </span>
+                  <span className="badge bg-light text-secondary rounded-3 py-2 px-3">
+                    Mobile
+                  </span>
+                  <span className="badge bg-light text-secondary rounded-3 py-2 px-3">
+                    Oppo
+                  </span>
+                  <span className="badge bg-light text-secondary rounded-3 py-2 px-3">
+                    Tablet
+                  </span>
+                </div>
               </div>
 
               <div className="filter-card mb-3">
                 <h3 className="filter-title">Random Product</h3>
+                <div className="mt-4">
+                  <div className="random-products d-flex">
+                    <div className="w-50">
+                      <img
+                        src="images/watch.jpg"
+                        className="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div className="w-50">
+                      <h4>Lorem ipsum dolor sit amet.</h4>
+                      <StarRatingComponent
+                        starCount={5}
+                        edit={false}
+                        value={3}
+                        activeColor="#ffd700"
+                      />
+                      <p className="fw-bold">$100</p>
+                    </div>
+                  </div>
+                  <div className="random-products d-flex">
+                    <div className="w-50">
+                      <img
+                        src="images/watch.jpg"
+                        className="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div className="w-50">
+                      <h4>Lorem ipsum dolor sit amet.</h4>
+                      <StarRatingComponent
+                        starCount={5}
+                        edit={false}
+                        value={3}
+                        activeColor="#ffd700"
+                      />
+                      <p className="fw-bold">$100</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="col-9"></div>

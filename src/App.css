@@ -436,4 +436,16 @@ footer .input-group-text:hover {
   background: red;
   border-radius: 50%;
 }
+
+.product-tags span {
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.random-products h4 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
 /* ================Our Store end============== */
