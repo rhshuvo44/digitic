@@ -1,7 +1,12 @@
 import React from "react";
+import Meta from "../components/Meta";
 
 const Contact = () => {
-  return <div>contact</div>;
+  return (
+    <>
+      <Meta title="Contact - Digitic" />
+    </>
+  );
 };
 
 export default Contact;
