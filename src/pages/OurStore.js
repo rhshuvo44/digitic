@@ -1,7 +1,7 @@
 import React from "react";
+import StarRatingComponent from "react-star-rating-component";
 import BrandCrumb from "../components/BrandCrumb";
 import Meta from "../components/Meta";
-import StarRatingComponent from "react-star-rating-component";
 
 const OurStore = () => {
   return (
@@ -196,7 +196,9 @@ const OurStore = () => {
                         value={3}
                         activeColor="#ffd700"
                       />
-                      <p className="fw-bold">$100</p>
+                      <p className="fw-bold">
+                        <b>$ 100</b>
+                      </p>
                     </div>
                   </div>
                   <div className="random-products d-flex">
@@ -215,13 +217,83 @@ const OurStore = () => {
                         value={3}
                         activeColor="#ffd700"
                       />
-                      <p className="fw-bold">$100</p>
+                      <p className="fw-bold">
+                        <b>$ 100</b>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-9"></div>
+            <div className="col-9">
+              <div className="filter-sort-grid mb-4">
+                <div className="d-flex justify-content-between align-items-center">
+                  <div className="d-flex align-items-center gap-10">
+                    <p className="mb-0" style={{ width: "100px" }}>
+                      Sort By:
+                    </p>
+                    <select
+                      name="sort_by"
+                      class=" form-control form-select"
+                      id="SortBy"
+                      aria-describedby="a11y-refresh-page-message"
+                    >
+                      <option value="manual">Featured</option>
+                      <option value="best-selling" selected="selected">
+                        Best selling
+                      </option>
+                      <option value="title-ascending">
+                        Alphabetically, A-Z
+                      </option>
+                      <option value="title-descending">
+                        Alphabetically, Z-A
+                      </option>
+                      <option value="price-ascending">
+                        Price, low to high
+                      </option>
+                      <option value="price-descending">
+                        Price, high to low
+                      </option>
+                      <option value="created-ascending">
+                        Date, old to new
+                      </option>
+                      <option value="created-descending">
+                        Date, new to old
+                      </option>
+                    </select>
+                  </div>
+                  <div className="d-flex align-items-center gap-10">
+                    <p className="tottalproducts mb-0">21 products</p>
+                    <div className="d-flex align-items-center gap-10 grid">
+                      <img
+                        src="images/gr4.svg"
+                        className="d-block img-fluid"
+                        alt=""
+                      />
+
+                      <img
+                        src="images/gr3.svg"
+                        className="d-block img-fluid"
+                        alt=""
+                      />
+                      <img
+                        src="images/gr2.svg"
+                        className="d-block img-fluid"
+                        alt=""
+                      />
+                      <img
+                        src="images/gr.svg"
+                        className="d-block img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="products-list pb-5">
+                
+              </div>
+            </div>
           </div>
         </div>
       </div>
