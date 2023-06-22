@@ -254,12 +254,13 @@ footer .input-group-text:hover {
 /* =============BLog ================== */
 .blog-card {
   background: white;
-
   border-radius: 10px;
 }
 .blog-card img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  width: 100%;
+  object-fit: contain;
 }
 .blog-content {
   padding: 15px;
@@ -365,6 +366,14 @@ footer .input-group-text:hover {
   text-overflow: ellipsis;
   word-break: break-word;
   margin: 0 0 14px;
+}
+.special-product-card .special-product-content .brand {
+  color: #bf4800;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0 0 12px;
+  opacity: 1;
+  font-size: 13px;
 }
 /* ================Special Products end============== */
 /* ================famous Products ============== */
