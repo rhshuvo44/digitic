@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import StarRatingComponent from "react-star-rating-component";
 
 const SpecialProduct = () => {
+  const ratting = 3;
   return (
     <div className="col-6 mb-3">
       <div className="special-product-card">
@@ -15,8 +16,9 @@ const SpecialProduct = () => {
             <h6 className="title">Lorem ipsum dolor sit amet.</h6>
             <StarRatingComponent
               starCount={5}
+              name="rate1"
               edit={false}
-              value="3"
+              value={ratting}
               activeColor="#ffd700"
             />
             <p className="price">
