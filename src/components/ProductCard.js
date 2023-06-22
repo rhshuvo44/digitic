@@ -1,11 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import StarRatingComponent from "react-star-rating-component";
 
-const ProductCard = () => {
+const ProductCard = ({ grid }) => {
+  let location = useLocation();
   const ratting = 3;
   return (
-    <div className="col-3">
+    <div
+      className={`${location?.pathname === "/store" ? `col-${grid}` : "col-3"}`}
+    >
       <Link to="/single" className="product-card position-relative">
         <div className="wishlist-icon position-absolute">
           <Link to="/">

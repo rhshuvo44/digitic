@@ -290,6 +290,7 @@ footer .input-group-text:hover {
   padding: 15px;
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 .product-card .product-img {
   height: 270px;
@@ -464,5 +465,19 @@ footer .input-group-text:hover {
   background: #f2f2f2;
   padding: 5px;
   border-radius: 10px;
+}
+.products-list .col-12 .product-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.products-list .col-12 .product-card .product-img {
+  width: 25%;
+}
+.products-list .col-12 .product-card .product-details {
+  width: 75%;
+}
+.products-list .product-img {
+  height: auto;
 }
 /* ================Our Store end============== */

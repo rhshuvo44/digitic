@@ -2,8 +2,12 @@ import React from "react";
 import StarRatingComponent from "react-star-rating-component";
 import BrandCrumb from "../components/BrandCrumb";
 import Meta from "../components/Meta";
+import { useState } from "react";
+import ProductCard from "../components/ProductCard";
 
 const OurStore = () => {
+  const [grid, setGrid] = useState(4);
+  console.log(grid);
   return (
     <>
       <Meta title="Our Store - Digitic" />
@@ -266,22 +270,26 @@ const OurStore = () => {
                     <p className="tottalproducts mb-0">21 products</p>
                     <div className="d-flex align-items-center gap-10 grid">
                       <img
+                        onClick={() => setGrid(3)}
                         src="images/gr4.svg"
                         className="d-block img-fluid"
                         alt=""
                       />
 
                       <img
+                        onClick={() => setGrid(4)}
                         src="images/gr3.svg"
                         className="d-block img-fluid"
                         alt=""
                       />
                       <img
+                        onClick={() => setGrid(6)}
                         src="images/gr2.svg"
                         className="d-block img-fluid"
                         alt=""
                       />
                       <img
+                        onClick={() => setGrid(12)}
                         src="images/gr.svg"
                         className="d-block img-fluid"
                         alt=""
@@ -290,8 +298,19 @@ const OurStore = () => {
                   </div>
                 </div>
               </div>
-              <div className="products-list pb-5">
-                
+              <div className="row products-list pb-5">
+                <ProductCard grid={grid} />
+                <ProductCard grid={grid} />
+                <ProductCard grid={grid} />
+                <ProductCard grid={grid} />
+                <ProductCard grid={grid} />
+                <ProductCard grid={grid} />
+                <ProductCard grid={grid} />
+                <ProductCard grid={grid} />
+                <ProductCard grid={grid} />
+                <ProductCard grid={grid} />
+                <ProductCard grid={grid} />
+                <ProductCard grid={grid} />
               </div>
             </div>
           </div>
