@@ -13,7 +13,9 @@ const SpecialProduct = () => {
           </div>
           <div className="special-product-content">
             <h5 className="brand">Havels</h5>
-            <h6 className="title">Lorem ipsum dolor sit amet.</h6>
+            <h6 className="title">
+              Samsung Galaxy Note10+ Mobile Phone; Sim...
+            </h6>
             <StarRatingComponent
               starCount={5}
               name="rate1"

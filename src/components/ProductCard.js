@@ -21,7 +21,9 @@ const ProductCard = ({ grid }) => {
         </div>
         <div className="product-details">
           <h6 className="brand">Apple</h6>
-          <h5 className="product-title">Lorem ipsum dolor sit amet.</h5>
+          <h5 className="product-title">
+            Kids Headphones Bulk 10 Pack Multi Colored For Students
+          </h5>
           <StarRatingComponent
             starCount={5}
             name="rate1"
@@ -30,12 +32,10 @@ const ProductCard = ({ grid }) => {
             activeColor="#ffd700"
           />
           <p className="disc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, illum
-            atque eius deserunt incidunt modi neque accusantium? Numquam veniam
-            mollitia corporis, inventore tempore corrupti quod amet reiciendis
-            cum facilis cupiditate molestias laudantium explicabo! Quis natus
-            facere, velit quibusdam odit rem. Saepe, similique? Ratione quasi
-            libero est totam expedita fuga consequuntur.
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti quos
+            dolores et quas molestias excepturi sint occaecati cupiditate non
+            provident, similique sunt...
           </p>
           <p className="price">$100.00</p>
         </div>

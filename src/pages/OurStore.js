@@ -6,7 +6,7 @@ import { useState } from "react";
 import ProductCard from "../components/ProductCard";
 
 const OurStore = () => {
-  const [grid, setGrid] = useState(4);
+  const [grid, setGrid] = useState(3);
   console.log(grid);
   return (
     <>

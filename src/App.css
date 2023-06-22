@@ -292,6 +292,17 @@ footer .input-group-text:hover {
   overflow: hidden;
   margin-bottom: 10px;
 }
+.product-card .product-title {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  margin: 0 0 14px;
+}
 .product-card .product-img {
   height: 270px;
 }
@@ -343,6 +354,17 @@ footer .input-group-text:hover {
 }
 .special-product-card .badge {
   background: #ef3939 !important;
+}
+.special-product-card .special-product-content .title {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  margin: 0 0 14px;
 }
 /* ================Special Products end============== */
 /* ================famous Products ============== */
