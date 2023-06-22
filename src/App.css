@@ -544,3 +544,39 @@ footer .input-group-text:hover {
 }
 
 /* ================Our Store end============== */
+/* ================Contact start============== */
+.contact-inner-wrapper {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  gap: 15px;
+}
+.contact-inner-wrapper .contact-title {
+  font-size: 26px;
+  line-height: 35px;
+  color: #1c1b1b;
+}
+.contact-inner-wrapper form .form-control {
+  background: var(--color-f5f5f7);
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 10px;
+}
+.contact-inner-wrapper form .form-control:focus {
+  box-shadow: none;
+}
+.contact-inner-wrapper form .form-floating label {
+  font-size: 14px;
+  color: var(--color-777777);
+  letter-spacing: 0.1rem;
+  line-height: 24px;
+}
+.contact-inner-wrapper ul li,
+.contact-inner-wrapper ul li a {
+  font-size: 13px;
+  color: var(--color-777777);
+  line-height: 22px;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+}
+/* ================Contact end============== */

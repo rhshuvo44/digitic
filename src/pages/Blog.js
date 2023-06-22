@@ -8,7 +8,7 @@ const Blog = () => {
     <>
       <Meta title="News - Digitic" />
       <BrandCrumb title="News" />
-      <div className="store-wrapper home-wrapper-2 py-5">
+      <div className="blog-wrapper home-wrapper-2 py-5">
         <div className="container-xxl">
           <div className="row">
             <div className="col-3">

@@ -6,7 +6,7 @@ const BlogCard = () => {
 
   return (
     <div className={`${location?.pathname === "/blog" ? `col-6` : "col-3"}`}>
-      <div className="blog-card">
+      <div className="blog-card mb-3">
         <div className="card-image">
           <img src="images/blog-1.jpg" className="img-fluid" alt="blog" />
         </div>
