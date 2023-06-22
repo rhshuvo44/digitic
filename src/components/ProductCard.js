@@ -29,6 +29,14 @@ const ProductCard = ({ grid }) => {
             value={ratting}
             activeColor="#ffd700"
           />
+          <p className="disc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, illum
+            atque eius deserunt incidunt modi neque accusantium? Numquam veniam
+            mollitia corporis, inventore tempore corrupti quod amet reiciendis
+            cum facilis cupiditate molestias laudantium explicabo! Quis natus
+            facere, velit quibusdam odit rem. Saepe, similique? Ratione quasi
+            libero est totam expedita fuga consequuntur.
+          </p>
           <p className="price">$100.00</p>
         </div>
         <div className="action-bar position-absolute">

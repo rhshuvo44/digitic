@@ -463,13 +463,27 @@ footer .input-group-text:hover {
   width: 34px;
   height: 34px;
   background: #f2f2f2;
-  padding: 5px;
+  padding: 10px;
   border-radius: 10px;
+  cursor: pointer;
 }
 .products-list .col-12 .product-card {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+.product-card .disc {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 23px;
+  display: none;
+  color: #777777;
+}
+.products-list .col-12 .product-card .disc {
+  display: block;
+}
+.products-list .col-12 .product-card .action-bar {
+  top: 15%;
 }
 .products-list .col-12 .product-card .product-img {
   width: 25%;
