@@ -490,8 +490,26 @@ footer .input-group-text:hover {
 }
 .products-list .col-12 .product-card .product-details {
   width: 75%;
+  overflow: hidden;
 }
 .products-list .product-img {
   height: auto;
 }
+/* -----------------------------------
+* product action bar change for 12 grid
+ */
+
+.products-list .col-12 .product-card:hover .action-bar {
+  left: 23%;
+}
+
+.products-list .col-12 .product-card .wishlist-icon {
+  top: 5%;
+  left: 23%;
+}
+.products-list .col-12 .product-card .action-bar {
+  right: -23px;
+  transition: all 0.3s;
+}
+
 /* ================Our Store end============== */
