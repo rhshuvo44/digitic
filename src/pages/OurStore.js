@@ -4,6 +4,7 @@ import BrandCrumb from "../components/BrandCrumb";
 import Meta from "../components/Meta";
 import { useState } from "react";
 import ProductCard from "../components/ProductCard";
+import Colors from "../components/Colors";
 
 const OurStore = () => {
   const [grid, setGrid] = useState(3);
@@ -82,20 +83,7 @@ const OurStore = () => {
 
                 <div>
                   <h5 className="sub-title">Color</h5>
-                  <ul className="colors">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                  </ul>
+                  <Colors/>
                 </div>
 
                 <div>

@@ -580,3 +580,22 @@ footer .input-group-text:hover {
   font-weight: 400;
 }
 /* ================Contact end============== */
+/* ================Compare Product start============== */
+.compare-product-card {
+  padding: 20px 15px;
+  background: white;
+  border-radius: 10px;
+}
+.compare-product-card .cross {
+  top: 15px;
+  right: 15px;
+  width: 25px;
+  padding: 3px;
+  cursor: pointer;
+}
+.compare-product-details .title {
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+}
+/* ================Compare Product end============== */
