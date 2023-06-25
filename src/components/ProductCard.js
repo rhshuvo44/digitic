@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import StarRatingComponent from "react-star-rating-component";
+// import StarRatingComponent from "react-star-rating-component";
 
 const ProductCard = ({ grid }) => {
   let location = useLocation();
@@ -24,13 +24,13 @@ const ProductCard = ({ grid }) => {
           <h5 className="product-title">
             Kids Headphones Bulk 10 Pack Multi Colored For Students
           </h5>
-          <StarRatingComponent
+          {/* <StarRatingComponent
             starCount={5}
             name="rate1"
             edit={false}
             value={ratting}
             activeColor="#ffd700"
-          />
+          /> */}
           <p className="disc">
             "At vero eos et accusamus et iusto odio dignissimos ducimus qui
             blanditiis praesentium voluptatum deleniti atque corrupti quos

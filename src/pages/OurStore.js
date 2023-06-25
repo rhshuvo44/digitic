@@ -1,5 +1,5 @@
 import React from "react";
-import StarRatingComponent from "react-star-rating-component";
+// import StarRatingComponent from "react-star-rating-component";
 import BrandCrumb from "../components/BrandCrumb";
 import Meta from "../components/Meta";
 import { useState } from "react";
@@ -182,12 +182,12 @@ const OurStore = () => {
                     </div>
                     <div className="w-50">
                       <h4>Lorem ipsum dolor sit amet.</h4>
-                      <StarRatingComponent
+                      {/* <StarRatingComponent
                         starCount={5}
                         edit={false}
                         value={3}
                         activeColor="#ffd700"
-                      />
+                      /> */}
                       <p className="fw-bold">
                         <b>$ 100</b>
                       </p>
@@ -203,12 +203,12 @@ const OurStore = () => {
                     </div>
                     <div className="w-50">
                       <h4>Lorem ipsum dolor sit amet.</h4>
-                      <StarRatingComponent
+                      {/* <StarRatingComponent
                         starCount={5}
                         edit={false}
                         value={3}
                         activeColor="#ffd700"
-                      />
+                      /> */}
                       <p className="fw-bold">
                         <b>$ 100</b>
                       </p>
