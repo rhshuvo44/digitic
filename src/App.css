@@ -58,6 +58,10 @@ a {
   font-weight: 500;
   margin-bottom: 30px;
 }
+/* .widget-svg {
+  width: 15px !important;
+  height: 15px !important;
+} */
 /*======================== header part ========================= */
 .header-top-strip {
   background: var(--color-131921);

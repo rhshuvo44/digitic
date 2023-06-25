@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import StarRatingComponent from "react-star-rating-component";
+import StarRatings from "react-star-ratings";
 
 const SpecialProduct = () => {
-  const ratting = 3;
   return (
     <div className="col-6 mb-3">
       <div className="special-product-card">
@@ -16,13 +15,14 @@ const SpecialProduct = () => {
             <h6 className="title">
               Samsung Galaxy Note10+ Mobile Phone; Sim...
             </h6>
-            {/* <StarRatingComponent
-              starCount={5}
-              name="rate1"
-              edit={false}
-              value={ratting}
-              activeColor="#ffd700" */}
-            {/* /> */}
+            <StarRatings
+              rating={4}
+              starRatedColor="#ffd700"
+              numberOfStars={5}
+              name="rating"
+              starSpacing="2px"
+              starDimension="15px"
+            />
             <p className="price">
               <span className="red-p">$100.00</span> &nbsp;{" "}
               <strike>$200</strike>

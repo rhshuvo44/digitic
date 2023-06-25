@@ -1,10 +1,9 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-// import StarRatingComponent from "react-star-rating-component";
+import StarRatings from "react-star-ratings";
 
 const ProductCard = ({ grid }) => {
   let location = useLocation();
-  const ratting = 3;
   return (
     <div
       className={`${location?.pathname === "/store" ? `col-${grid}` : "col-3"}`}
@@ -24,13 +23,14 @@ const ProductCard = ({ grid }) => {
           <h5 className="product-title">
             Kids Headphones Bulk 10 Pack Multi Colored For Students
           </h5>
-          {/* <StarRatingComponent
-            starCount={5}
-            name="rate1"
-            edit={false}
-            value={ratting}
-            activeColor="#ffd700"
-          /> */}
+          <StarRatings
+            rating={3}
+            starRatedColor="#ffd700"
+            numberOfStars={5}
+            name="rating"
+            starSpacing="2px"
+            starDimension="15px"
+          />
           <p className="disc">
             "At vero eos et accusamus et iusto odio dignissimos ducimus qui
             blanditiis praesentium voluptatum deleniti atque corrupti quos

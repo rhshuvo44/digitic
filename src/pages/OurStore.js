@@ -5,6 +5,7 @@ import Meta from "../components/Meta";
 import { useState } from "react";
 import ProductCard from "../components/ProductCard";
 import Colors from "../components/Colors";
+import StarRatings from "react-star-ratings";
 
 const OurStore = () => {
   const [grid, setGrid] = useState(3);
@@ -83,7 +84,7 @@ const OurStore = () => {
 
                 <div>
                   <h5 className="sub-title">Color</h5>
-                  <Colors/>
+                  <Colors />
                 </div>
 
                 <div>
@@ -182,12 +183,14 @@ const OurStore = () => {
                     </div>
                     <div className="w-50">
                       <h4>Lorem ipsum dolor sit amet.</h4>
-                      {/* <StarRatingComponent
-                        starCount={5}
-                        edit={false}
-                        value={3}
-                        activeColor="#ffd700"
-                      /> */}
+                      <StarRatings
+                        rating={3}
+                        starRatedColor="#ffd700"
+                        numberOfStars={5}
+                        name="rating"
+                        starSpacing="2px"
+                        starDimension="15px"
+                      />
                       <p className="fw-bold">
                         <b>$ 100</b>
                       </p>
@@ -203,12 +206,14 @@ const OurStore = () => {
                     </div>
                     <div className="w-50">
                       <h4>Lorem ipsum dolor sit amet.</h4>
-                      {/* <StarRatingComponent
-                        starCount={5}
-                        edit={false}
-                        value={3}
-                        activeColor="#ffd700"
-                      /> */}
+                      <StarRatings
+                        rating={3}
+                        starRatedColor="#ffd700"
+                        numberOfStars={5}
+                        name="rating"
+                        starSpacing="2px"
+                        starDimension="15px"
+                      />
                       <p className="fw-bold">
                         <b>$ 100</b>
                       </p>
