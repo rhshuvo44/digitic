@@ -8,6 +8,7 @@ const Signup = () => {
       <Meta title="Create Account- Digitic" />
       <BrandCrumb title="Create Account" />;
       <div className="create-wrapper py-5 home-wrapper-2">
+      <div className="container-xxl">
         <div className="row">
           <div className="col-12">
             <div className="auth-card">
@@ -55,6 +56,7 @@ const Signup = () => {
               </form>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </>

@@ -630,7 +630,7 @@ footer .input-group-text:hover {
   color: var(--color-777777);
 }
 /* ================Compare ,Wishlist Product end============== */
-/* ================login Start============== */
+/* ================auth card Start============== */
 .auth-card {
   padding: 20px;
   background: white;
@@ -642,6 +642,12 @@ footer .input-group-text:hover {
   font-size: 19px;
   line-height: 25px;
   font-weight: 500;
+  color: var(--color-777777);
+}
+.auth-card p {
+  font-size: 13px;
+  line-height: 22px;
+  font-weight: 400;
   color: var(--color-777777);
 }
 .auth-card label {
@@ -674,4 +680,10 @@ footer .input-group-text:hover {
   background: var(--color-1c1c1b);
   color: white;
 }
-/* ================wishlist Product end============== */
+.auth-card .cancel {
+  color: var(--color-1c1c1b);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+/* ================auth card end============== */
