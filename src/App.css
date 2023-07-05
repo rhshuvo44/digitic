@@ -710,3 +710,26 @@ footer .input-group-text:hover {
   color: var(--color-777777);
 }
 /* ================Single Blog end============== */
+/* ================privacy-wrapper start============== */
+
+.privacy-wrapper .privacy-card {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+.privacy-wrapper .privacy-card .privacy-title {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: .06rem;
+  color: #1c1b1b;
+  margin: 30px 0 15px;
+}
+.privacy-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  color: var(--color-777777);
+}
+/* ================privacy-wrapper end============== */
