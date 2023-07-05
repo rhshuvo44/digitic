@@ -3,18 +3,21 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Layout from "./layout/Layout";
 import About from "./pages/About";
-import Home from "./pages/Home";
-import OurStore from "./pages/OurStore";
-import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import CompareProduct from "./pages/CompareProduct";
-import Wishlist from "./pages/Wishlist";
-import Login from "./pages/Login";
+import Contact from "./pages/Contact";
 import Forgotpassword from "./pages/Forgotpassword";
-import Signup from "./pages/Signup";
-import Resetpassword from "./pages/Resetpassword";
-import SingleBlog from "./pages/SingleBlog";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import OurStore from "./pages/OurStore";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import RefundPolicy from "./pages/RefundPolicy";
+import Resetpassword from "./pages/Resetpassword";
+import Signup from "./pages/Signup";
+import SingleBlog from "./pages/SingleBlog";
+import Wishlist from "./pages/Wishlist";
+import TermAndContions from "./pages/TermAndContions";
+import ShippingPolicy from "./pages/ShippingPolicy";
 
 function App() {
   return (
@@ -33,6 +36,9 @@ function App() {
         <Route path="/reset-password" element={<Resetpassword />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/shipping-policy" element={<ShippingPolicy />} />
+        <Route path="/terms" element={<TermAndContions />} />
       </Route>
     </Routes>
   );

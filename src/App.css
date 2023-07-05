@@ -712,20 +712,23 @@ footer .input-group-text:hover {
 /* ================Single Blog end============== */
 /* ================privacy-wrapper start============== */
 
-.privacy-wrapper .privacy-card {
+.privacy-card,
+.refund-card {
   background: white;
   padding: 20px 30px;
   border-radius: 10px;
 }
-.privacy-wrapper .privacy-card .privacy-title {
+.privacy-card .privacy-title,
+.refund-card .refund-title {
   font-size: 18px;
   line-height: 1.5;
   font-weight: 600;
-  letter-spacing: .06rem;
+  letter-spacing: 0.06rem;
   color: #1c1b1b;
   margin: 30px 0 15px;
 }
-.privacy-card p {
+.privacy-card p,
+.refund-card p {
   font-size: 13px;
   line-height: 1.5;
   font-weight: 400;
