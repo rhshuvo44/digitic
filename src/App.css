@@ -582,8 +582,8 @@ footer .input-group-text:hover {
 /* ================Contact end============== */
 
 /* ================Compare ,Wishlist Product start============== */
-.compare-product-card
-,.wishlist-card  {
+.compare-product-card,
+.wishlist-card {
   padding: 20px 15px;
   background: white;
   border-radius: 10px;
@@ -596,15 +596,15 @@ footer .input-group-text:hover {
   padding: 3px;
   cursor: pointer;
 }
-.compare-product-details .title
-,.wishlist-card .title {
+.compare-product-details .title,
+.wishlist-card .title {
   font-size: 15px;
   line-height: 22px;
   font-weight: 500;
   color: var(--color-1c1c1b);
 }
-.compare-product-details .price
-,.wishlist-card .price  {
+.compare-product-details .price,
+.wishlist-card .price {
   font-size: 15px;
   line-height: 22px;
   font-weight: 500;
@@ -630,6 +630,38 @@ footer .input-group-text:hover {
   color: var(--color-777777);
 }
 /* ================Compare ,Wishlist Product end============== */
-/* ================wishlist Product Start============== */
-
+/* ================login Start============== */
+.auth-card {
+  padding: 20px;
+  background: white;
+  width: 500px;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+.auth-card h3 {
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: 500;
+  color: var(--color-777777);
+}
+.auth-card label {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--color-777777);
+}
+.auth-card .forgote-link {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #1c1b1b;
+}
+.auth-card .form-control{
+  background: var(--color-ededed);
+  border: 0;
+}
+.auth-card .form-control:focus {
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.25);
+}
 /* ================wishlist Product end============== */
