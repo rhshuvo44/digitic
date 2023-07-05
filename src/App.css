@@ -687,3 +687,26 @@ footer .input-group-text:hover {
   line-height: 22px;
 }
 /* ================auth card end============== */
+/* ================Single Blog start============== */
+.single-blog-card a {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-777777);
+  margin-bottom: 20px;
+}
+.single-blog-card h3 {
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 600;
+  word-wrap: break-word;
+  color: #1c1b1b;
+}
+.single-blog-card p {
+  font-size: 13px;
+  line-height: 22px;
+  font-weight: 400;
+  word-wrap: break-word;
+  color: var(--color-777777);
+}
+/* ================Single Blog end============== */

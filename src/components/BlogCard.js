@@ -17,7 +17,7 @@ const BlogCard = () => {
             You’re only as good as your last collection, which is an enormous
             pressure. I think there is something about luxury...
           </p>
-          <Link to="/read" className="button">
+          <Link to="/blog/:id" className="button">
             Read More
           </Link>
         </div>

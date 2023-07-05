@@ -7,7 +7,7 @@ const Resetpassword = () => {
     <>
       <Meta title="Reset Password - Digitic" />
       <BrandCrumb title="Reset Password" />
-      <div className=" py-5 home-wrapper-2">
+      <div className="py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
