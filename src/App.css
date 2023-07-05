@@ -656,12 +656,22 @@ footer .input-group-text:hover {
   font-weight: 400;
   color: #1c1b1b;
 }
-.auth-card .form-control{
+.auth-card .form-control {
   background: var(--color-ededed);
   border: 0;
+  height: 50px;
 }
 .auth-card .form-control:focus {
   box-shadow: none;
   border-color: rgba(0, 0, 0, 0.25);
+}
+.auth-card .signup {
+  background: var(--color-febd69);
+  color: var(--color-1c1c1b);
+  transition: all 0.5s;
+}
+.auth-card .signup:hover {
+  background: var(--color-1c1c1b);
+  color: white;
 }
 /* ================wishlist Product end============== */

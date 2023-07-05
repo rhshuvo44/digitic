@@ -34,10 +34,17 @@ const Login = () => {
                 </div>
 
                 <div>
-                  <Link to="/forgot-password" className="forgote-link">Forgot Password?</Link>
+                  <Link to="/forgot-password" className="forgote-link">
+                    Forgot Password?
+                  </Link>
                   <div className="d-flex gap-15 justify-content-center align-items-center mt-3">
-                    <button className="button border-0">Login</button>
-                    <Link to="/signup" className="button signup">
+                    <button className="button border-0 text-capitalize">
+                      Login
+                    </button>
+                    <Link
+                      to="/signup"
+                      className="button signup text-capitalize"
+                    >
                       Signup
                     </Link>
                   </div>
