@@ -58,10 +58,6 @@ a {
   font-weight: 500;
   margin-bottom: 30px;
 }
-/* .widget-svg {
-  width: 15px !important;
-  height: 15px !important;
-} */
 /*======================== header part ========================= */
 .header-top-strip {
   background: var(--color-131921);
@@ -584,6 +580,7 @@ footer .input-group-text:hover {
   font-weight: 400;
 }
 /* ================Contact end============== */
+
 /* ================Compare Product start============== */
 .compare-product-card {
   padding: 20px 15px;
@@ -600,6 +597,32 @@ footer .input-group-text:hover {
 .compare-product-details .title {
   font-size: 15px;
   line-height: 22px;
+  font-weight: 500;
+  color: var(--color-1c1c1b);
+}
+.compare-product-details .price {
+  font-size: 15px;
+  line-height: 22px;
   font-weight: 400;
+}
+.compare-product-card .product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  border-top: 1px solid var(--color-f5f5f7);
+}
+.compare-product-card .product-details h5 {
+  font-size: 15px;
+  line-height: 22px;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--color-1c1c1b);
+}
+.compare-product-card .product-details p {
+  font-size: 13px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--color-777777);
 }
 /* ================Compare Product end============== */
