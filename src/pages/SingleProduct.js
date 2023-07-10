@@ -11,6 +11,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 const SingleProduct = () => {
   const [orderProduct, setOrderProduct] = useState(true);
   const [reting, setReting] = useState(0);
+  // image magnify
   const props = {
     width: 610,
     height: 500,
@@ -18,6 +19,8 @@ const SingleProduct = () => {
     img: "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
     // zoomPosition: "original",
   };
+
+  // text copy funcion
   const copyToClipboard = (text) => {
     console.log("text", text);
     var textField = document.createElement("textarea");

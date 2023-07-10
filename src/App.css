@@ -865,3 +865,46 @@ footer .input-group-text:hover {
   color: white;
 }
 /* ================main Product ============== */
+/* ================Cart pages ============== */
+.cart-header,
+.cart-data {
+  border-bottom: 1px solid #eaeaea;
+}
+.cart-header h4 {
+  font-size: 13px;
+  color: var(--color-777777);
+}
+.cart-col-1 {
+  width: 40%;
+}
+.cart-col-2 {
+  width: 10%;
+}
+.cart-col-3 {
+  width: 15%;
+}
+.cart-col-4 {
+  width: 15%;
+}
+.cart-data p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-777777);
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.subtotal {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-777777);
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+}
+.tax,
+.cart-note {
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.04rem;
+  color: var(--color-777777);
+}
+/* ================Cart pages ============== */
