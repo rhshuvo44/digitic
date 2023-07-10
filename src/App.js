@@ -18,6 +18,7 @@ import SingleBlog from "./pages/SingleBlog";
 import Wishlist from "./pages/Wishlist";
 import TermAndContions from "./pages/TermAndContions";
 import ShippingPolicy from "./pages/ShippingPolicy";
+import SingleProduct from "./pages/SingleProduct";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<SingleBlog />} />
         <Route path="/store" element={<OurStore />} />
+        <Route path="/product/:id" element={<SingleProduct />} />
         <Route path="/compare" element={<CompareProduct />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/login" element={<Login />} />

@@ -741,4 +741,63 @@ footer .input-group-text:hover {
   letter-spacing: 0.3px;
   color: var(--color-777777);
 }
-/* ================privacy-wrapper end============== */
+/* ================main Product ============== */
+.description-wrapper h4 {
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #1c1b1b;
+}
+.description-wrapper p {
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-777777);
+  letter-spacing: 0.3px;
+}
+.review-inner-wrapper {
+  background: white;
+  padding: 30px;
+}
+.review-head {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
+}
+.review-head h4 {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #1c1b1b;
+}
+.review-head p,
+.review-head a {
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-777777);
+  letter-spacing: 0.3px;
+}
+.review:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.review p {
+  font-size: 14px;
+  color: var(--color-777777);
+}
+.main-product-image {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+}
+.main-product-image > div {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.other-product-image > div {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.main-product-image img {
+  width: 100% !important;
+  height: 500px !important;
+  object-fit: cover;
+}
+/* ================main Product ============== */
