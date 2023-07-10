@@ -2,19 +2,31 @@ import React, { useState } from "react";
 import ReactImageZoom from "react-image-zoom";
 import StarRatings from "react-star-ratings";
 import BrandCrumb from "../components/BrandCrumb";
+import Colors from "../components/Colors";
 import Meta from "../components/Meta";
 import ProductCard from "../components/ProductCard";
+import { TbGitCompare } from "react-icons/tb";
+import { AiOutlineHeart } from "react-icons/ai";
 
 const SingleProduct = () => {
+  const [orderProduct, setOrderProduct] = useState(true);
+  const [reting, setReting] = useState(0);
   const props = {
-    width: 400,
+    width: 610,
     height: 500,
     zoomWidth: 610,
     img: "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    // zoomPosition: "original",
   };
-
-  const [orderProduct, setOrderProduct] = useState(true);
-  const [reting, setReting] = useState(0);
+  const copyToClipboard = (text) => {
+    console.log("text", text);
+    var textField = document.createElement("textarea");
+    textField.innerText = text;
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand("copy");
+    textField.remove();
+  };
   return (
     <>
       <Meta title={"Product Name"} />
@@ -24,15 +36,162 @@ const SingleProduct = () => {
           <div className="row">
             <div className="col-6">
               <div className="main-product-image">
-                <div>
-                  <ReactImageZoom {...props} />
+                <ReactImageZoom {...props} />
+              </div>
+              <div className="other-product-image d-flex flex-wrap gap-15">
+                <div className="">
+                  <img
+                    src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    className="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div className="">
+                  <img
+                    src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    className="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div className="">
+                  <img
+                    src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    className="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div className="">
+                  <img
+                    src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    className="img-fluid"
+                    alt=""
+                  />
                 </div>
               </div>
-              <div className="other-product-image">
-                
+            </div>
+            <div className="col-6">
+              <div className="main-product-details">
+                <div className="border-bottom">
+                  <h3>
+                    Smart Watch With Advanced Health Monitoring, Fitness
+                    Tracking
+                  </h3>
+                </div>
+                <div className="border-bottom">
+                  <p className="price">$100</p>
+                  <div className="d-flex align-items-center gap-10">
+                    <div style={{ marginBottom: "0.5rem" }}>
+                      <StarRatings
+                        rating={4}
+                        starRatedColor="#ffd700"
+                        numberOfStars={5}
+                        name="rating"
+                        starSpacing="2px"
+                        starDimension="15px"
+                      />
+                    </div>
+                    <p className="mb-0"> (2 Reviews)</p>
+                  </div>
+                  <a href="#review" className="my-3">
+                    Write a Review
+                  </a>
+                </div>
+                <div className="py-3 ">
+                  <div className="d-flex gap-10 align-items-center">
+                    <h4>Type:</h4> <p>Watch</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center">
+                    <h4>Brand:</h4>
+                    <p>Havells</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center">
+                    <h4>Categories:</h4> <p>acnbvnnvh</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center">
+                    <h4>Tags:</h4>
+                    <p>watch</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center">
+                    <h4>SKU:</h4>
+                    <p>SKu027</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center">
+                    <h4>Availlability:</h4>
+                    <p className="">in Stock</p>
+                  </div>
+                  <div className="d-flex gap-10 flex-column">
+                    <h4>Size:</h4>
+                    <div className="d-flex flex-wrap gap-15 mb-2">
+                      <span className="badge border bg-white text-dark border-secondary">
+                        S
+                      </span>
+                      <span className="badge border bg-white text-dark border-secondary">
+                        M
+                      </span>
+                      <span className="badge border bg-white text-dark border-secondary">
+                        XL
+                      </span>
+                      <span className="badge border bg-white text-dark border-secondary">
+                        XXL
+                      </span>
+                    </div>
+                  </div>
+                  <div className="d-flex gap-10 flex-column">
+                    <h4>Color:</h4>
+                    <Colors />
+                  </div>
+                  <div className="d-flex gap-5 align-items-center my-2">
+                    <h4 className="mb-0">Quentity:</h4>
+
+                    <input
+                      type="number"
+                      name=""
+                      min={1}
+                      max={10}
+                      className="form-control"
+                      style={{ width: "70px" }}
+                      id=""
+                      placeholder="Qn"
+                    />
+                    <button className="button border-0 ">Add To Cart</button>
+                    <button className="button border-0 buy-btn">
+                      buy it now
+                    </button>
+                  </div>
+                  <div className="d-flex align-items-center gap-15">
+                    <a href="">
+                      <AiOutlineHeart className="fs-5 me-2" />
+                      Add to wishlist
+                    </a>
+                    <a href="">
+                      <TbGitCompare className="fs-5 me-2" />
+                      Add to comnpare
+                    </a>
+                  </div>
+                  <div className="d-flex gap-10 flex-column my-3">
+                    <h4>Shipping & Returns</h4>
+                    <p>
+                      Free shipping and returns available on all orders! <br />
+                      We ship all US domestic orders within
+                      <b>5-10 business days!</b>
+                    </p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center my-3">
+                    <h4>Product Link</h4>
+                    <p
+                      style={{ cursor: "pointer" }}
+                      onClick={() => {
+                        copyToClipboard(
+                          "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        );
+                      }}
+                    >
+                      Copy Product Link
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="col-6"></div>
           </div>
         </div>
       </section>
@@ -88,15 +247,15 @@ const SingleProduct = () => {
                     <div>
                       <a
                         className="text-dark text-decoration-underline"
-                        href="eee"
+                        href="#review"
                       >
                         Write a review
                       </a>
                     </div>
                   )}
                 </div>
-                <div className="review-form">
-                  <h4 className="mb-2">Write a review</h4>
+                <div className="review-form" id="review">
+                  <h4 className="my-2">Write a review</h4>
                   <form className="mt-4">
                     <div className="d-flex flex-column gap-10 mb-3">
                       <p className="mb-0">Ratting</p>

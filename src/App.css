@@ -461,6 +461,7 @@ footer .input-group-text:hover {
   list-style: none;
   gap: 10px;
   flex-wrap: wrap;
+  padding-left: 0px;
 }
 .colors li {
   width: 20px;
@@ -770,7 +771,8 @@ footer .input-group-text:hover {
   color: #1c1b1b;
 }
 .review-head p,
-.review-head a {
+.review-head a,
+.main-product-details a {
   font-size: 13px;
   line-height: 1.5;
   font-weight: 400;
@@ -792,12 +794,74 @@ footer .input-group-text:hover {
 .main-product-image > div {
   border: 1px solid rgba(0, 0, 0, 0.25);
 }
+.main-product-image .js-image-zoom__zoomed-image {
+  left: 55px;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  z-index: 1000;
+}
+.other-product-image {
+  background: white;
+  padding: 20px;
+}
 .other-product-image > div {
+  padding: 20px;
+  width: 48%;
   border: 1px solid rgba(0, 0, 0, 0.25);
 }
 .main-product-image img {
   width: 100% !important;
   height: 500px !important;
   object-fit: cover;
+}
+.main-product-details {
+  padding: 30px 20px;
+  background: white;
+  border-radius: 10px;
+}
+.main-product-details .border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.main-product-details h3 {
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--color-1c1c1b);
+  margin: 0 0 10px;
+  line-height: 26px;
+  padding: 0 0 10px;
+}
+.main-product-details h4 {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--color-1c1c1b);
+  letter-spacing: 0.8px;
+  line-height: 22px;
+}
+.main-product-details p {
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: var(--color-777777);
+  letter-spacing: 0.8px;
+  line-height: 22px;
+  margin-bottom: 0.5rem !important;
+}
+.main-product-details .price {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.main-product-details .buy-btn {
+  background: var(--color-febd69);
+  color: var(--color-1c1c1b);
+  transition: all 0.5s;
+}
+.main-product-details .buy-btn:hover {
+  background: var(--color-1c1c1b);
+  color: white;
 }
 /* ================main Product ============== */
