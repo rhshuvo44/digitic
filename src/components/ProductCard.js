@@ -10,9 +10,9 @@ const ProductCard = ({ grid }) => {
     >
       <Link to="/product/:id" className="product-card position-relative">
         <div className="wishlist-icon position-absolute">
-          <Link to="/">
+          <button className="border-0 bg-transparent">
             <img src="images/wish.svg" alt="" />
-          </Link>
+          </button>
         </div>
         <div className="product-img">
           <img src="images/tab.jpg" alt="" className="img-fluid" />
@@ -41,15 +41,15 @@ const ProductCard = ({ grid }) => {
         </div>
         <div className="action-bar position-absolute">
           <div className="d-flex flex-column gap-15">
-            <Link to="/">
+            <button className="border-0 bg-transparent">
               <img src="images/prodcompare.svg" alt="" />
-            </Link>
-            <Link to="/">
+            </button>
+            <button className="border-0 bg-transparent">
               <img src="images/view.svg" alt="" />
-            </Link>
-            <Link to="/">
+            </button>
+            <button className="border-0 bg-transparent">
               <img src="images/add-cart.svg" alt="" />
-            </Link>
+            </button>
           </div>
         </div>
       </Link>

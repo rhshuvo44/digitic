@@ -1,15 +1,15 @@
 import React from "react";
 import Meta from "../components/Meta";
 import BrandCrumb from "../components/BrandCrumb";
+import Container from "../components/Container";
 
 const Signup = () => {
   return (
     <>
       <Meta title="Create Account- Digitic" />
       <BrandCrumb title="Create Account" />;
-      <div className="create-wrapper py-5 home-wrapper-2">
-      <div className="container-xxl">
-        <div className="row">
+      <Container class1="create-wrapper py-5 home-wrapper-2">
+      <div className="row">
           <div className="col-12">
             <div className="auth-card">
               <h3 className="text-center">Create Account</h3>
@@ -57,8 +57,8 @@ const Signup = () => {
             </div>
           </div>
         </div>
-        </div>
-      </div>
+      </Container>
+      
     </>
   );
 };

@@ -1,15 +1,16 @@
 import React from "react";
 import Meta from "../components/Meta";
 import BrandCrumb from "../components/BrandCrumb";
+import Container from "../components/Container";
 
 const TermAndContions = () => {
   return (
     <>
       <Meta title="Terms & Conditions - Digitic" />
       <BrandCrumb title="Terms & Conditions" />
-      <section className="terms-wrapper py-5 home-wrapper-2">
-        <div className="container-xxl">
-          <div className="row">
+
+      <Container class1="terms-wrapper py-5 home-wrapper-2">
+      <div className="row">
             <div className="col-12">
               <div class="terms-card">
                 <h5 class="terms-title">The Standard Lorem Ipsum Passage</h5>
@@ -55,8 +56,8 @@ const TermAndContions = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+      </Container>
+      
     </>
   );
 };

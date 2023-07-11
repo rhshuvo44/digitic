@@ -908,3 +908,13 @@ footer .input-group-text:hover {
   color: var(--color-777777);
 }
 /* ================Cart pages ============== */
+/* ================Checkout pages ============== */
+.checkout-wrapper h4,
+.checkout-wrapper h5 {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-777777);
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+}
+/* ================Checkout pages ============== */

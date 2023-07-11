@@ -1,15 +1,15 @@
 import React from "react";
 import BrandCrumb from "../components/BrandCrumb";
 import Meta from "../components/Meta";
+import Container from "../components/Container";
 
 const Wishlist = () => {
   return (
     <>
       <Meta title="Wishlist - Digitic" />
       <BrandCrumb title="Wishlist" />
-      <div className="wishlist-wrapper py-5 home-wrapper-2">
-        <div className="container-xxl">
-          <div className="row">
+      <Container class1="wishlist-wrapper py-5 home-wrapper-2">
+      <div className="row">
             <div className="col-3">
               <div className="wishlist-card position-relative">
                 <img
@@ -27,8 +27,8 @@ const Wishlist = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+      </Container>
+      
     </>
   );
 };
