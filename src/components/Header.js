@@ -1,6 +1,7 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
 import { Link, NavLink } from "react-router-dom";
+import CustomInput from "./CustomInput";
 
 const Header = () => {
   return (
@@ -38,9 +39,8 @@ const Header = () => {
             </div>
             <div className="col-5">
               <div className="input-group">
-                <input
+                <CustomInput
                   type="search"
-                  className="form-control"
                   placeholder="Search Product Here..."
                   aria-label="Search Product Here..."
                   aria-describedby="search-product"

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import BrandCrumb from "../components/BrandCrumb";
 import Container from "../components/Container";
 import Meta from "../components/Meta";
+import CustomInput from "../components/CustomInput";
 
 const Checkout = () => {
   return (
@@ -71,38 +72,22 @@ const Checkout = () => {
                   <label for="floatingSelect">Country/Region</label>
                 </div>
                 <div className="flex-grow-1">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="First Name"
-                  />
+                  <CustomInput type="text" placeholder="First Name" />
                 </div>
                 <div className="flex-grow-1">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Last Name"
-                  />
+                  <CustomInput type="text" placeholder="Last Name" />
                 </div>
                 <div className="w-100">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Address"
-                  />
+                  <CustomInput type="text" placeholder="Address" />
                 </div>
                 <div className="w-100">
-                  <input
-                    type="text"
-                    className="form-control "
-                    placeholder="Apartment etc"
-                  />
+                  <CustomInput type="text" placeholder="Apartment etc" />
                 </div>
                 <div className="flex-grow-1">
-                  <input
+                  <CustomInput
                     type="text"
                     placeholder="City"
-                    className="form-control h-100"
+                    classname="h-100"
                   />
                 </div>
                 <div class="form-floating flex-grow-1">
@@ -119,10 +104,10 @@ const Checkout = () => {
                   <label for="floatingSelect">State</label>
                 </div>
                 <div className="flex-grow-1">
-                  <input
+                  <CustomInput
                     type="text"
                     placeholder="Zip"
-                    className="form-control h-100"
+                    classname=" h-100"
                   />
                 </div>
                 <div className="w-100 mt-3">

@@ -4,6 +4,7 @@ import BrandCrumb from "../components/BrandCrumb";
 import { AiOutlineHome, AiOutlineMail } from "react-icons/ai";
 import { BiInfoCircle, BiPhoneCall } from "react-icons/bi";
 import Container from "../components/Container";
+import CustomInput from "../components/CustomInput";
 const Contact = () => {
   return (
     <>
@@ -30,27 +31,27 @@ const Contact = () => {
                   <h3 className="contact-title">Contact</h3>
                   <form className="mt-4">
                     <div class="form-floating mb-3">
-                      <input
+                      <CustomInput
                         type="text"
-                        class="form-control bg-light"
+                        classname="bg-light"
                         id="floatingInput"
                         placeholder="Name"
                       />
                       <label for="floatingInput">Name</label>
                     </div>
                     <div class="form-floating mb-3">
-                      <input
+                      <CustomInput
                         type="email"
-                        class="form-control bg-light"
+                        classname="bg-light"
                         id="floatingInput"
                         placeholder="Email"
                       />
                       <label for="floatingInput">Email</label>
                     </div>
                     <div class="form-floating mb-3">
-                      <input
+                      <CustomInput
                         type="tel"
-                        class="form-control bg-light"
+                        classname="bg-light"
                         id="floatingInput"
                         placeholder="Number"
                       />
@@ -66,7 +67,7 @@ const Contact = () => {
                       />
                       <label for="floatingInput">Comment</label>
                     </div>
-                    <input type="submit" class="button border-0" value="Send" />
+                    <button className="button border-0">Send</button>
                   </form>
                 </div>
                 <div className="col-6 px-4">

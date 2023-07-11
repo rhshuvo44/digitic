@@ -4,6 +4,7 @@ import BrandCrumb from "../components/BrandCrumb";
 import Meta from "../components/Meta";
 import { Link } from "react-router-dom";
 import Container from "../components/Container";
+import CustomInput from "../components/CustomInput";
 
 const Cart = () => {
   return (
@@ -38,12 +39,11 @@ const Cart = () => {
                 <h5 className="price">$ 100</h5>
               </div>
               <div className="cart-col-3 d-flex align-items-center gap-15">
-                <input
+                <CustomInput
                   type="number"
                   name=""
                   min={1}
                   max={10}
-                  className="form-control"
                   style={{ width: "70px" }}
                   id=""
                   placeholder="Qn"

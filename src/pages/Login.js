@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import BrandCrumb from "../components/BrandCrumb";
 import Meta from "../components/Meta";
 import Container from "../components/Container";
+import CustomInput from "../components/CustomInput";
 
 const Login = () => {
   return (
@@ -16,18 +17,17 @@ const Login = () => {
               <h3 className="text-center">Login</h3>
               <form action="">
                 <div class="form-floating my-3">
-                  <input
+                  <CustomInput
                     type="email"
-                    class="form-control"
                     id="floatingInput"
                     placeholder="name@example.com"
                   />
+
                   <label for="floatingInput">Email address</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input
+                  <CustomInput
                     type="password"
-                    class="form-control"
                     id="floatingPassword"
                     placeholder="Password"
                   />

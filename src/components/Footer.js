@@ -7,6 +7,7 @@ import {
     BsYoutube,
 } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import CustomInput from "./CustomInput";
 const Footer = () => {
   return (
     <>
@@ -21,9 +22,9 @@ const Footer = () => {
             </div>
             <div className="col-7">
               <div className="input-group">
-                <input
+                <CustomInput
                   type="search"
-                  className="form-control py-1"
+                  classname="py-1"
                   placeholder="Enter Your Email"
                   aria-label="Enter Your Email"
                   aria-describedby="newsletter"

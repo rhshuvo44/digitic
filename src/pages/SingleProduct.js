@@ -8,6 +8,7 @@ import Colors from "../components/Colors";
 import Container from "../components/Container";
 import Meta from "../components/Meta";
 import ProductCard from "../components/ProductCard";
+import CustomInput from "../components/CustomInput";
 
 const SingleProduct = () => {
   const [orderProduct, setOrderProduct] = useState(true);
@@ -146,12 +147,11 @@ const SingleProduct = () => {
                 <div className="d-flex gap-5 align-items-center my-2">
                   <h4 className="mb-0">Quentity:</h4>
 
-                  <input
+                  <CustomInput
                     type="number"
                     name=""
                     min={1}
                     max={10}
-                    className="form-control"
                     style={{ width: "70px" }}
                     id=""
                     placeholder="Qn"
@@ -282,11 +282,9 @@ const SingleProduct = () => {
                     />
                   </div>
                   <div className="d-flex justify-content-end">
-                    <input
-                      type="submit"
-                      value="Submit review"
-                      className=" button border-0 text-capitalize"
-                    />
+                    <button className="button border-0 text-capitalize">
+                      Submit review
+                    </button>
                   </div>
                 </form>
               </div>

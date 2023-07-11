@@ -1,12 +1,13 @@
 import React from "react";
 // import StarRatingComponent from "react-star-rating-component";
-import BrandCrumb from "../components/BrandCrumb";
-import Meta from "../components/Meta";
 import { useState } from "react";
-import ProductCard from "../components/ProductCard";
-import Colors from "../components/Colors";
 import StarRatings from "react-star-ratings";
+import BrandCrumb from "../components/BrandCrumb";
+import Colors from "../components/Colors";
 import Container from "../components/Container";
+import CustomInput from "../components/CustomInput";
+import Meta from "../components/Meta";
+import ProductCard from "../components/ProductCard";
 
 const OurStore = () => {
   const [grid, setGrid] = useState(3);
@@ -62,18 +63,18 @@ const OurStore = () => {
                 <h5 className="sub-title">Price</h5>
                 <div className="d-flex align-items-center gap-10">
                   <div class="form-floating mb-3">
-                    <input
+                    <CustomInput
                       type="number"
-                      class="form-control bg-light"
+                      classname="bg-light"
                       id="floatingInput"
                       placeholder="From"
                     />
                     <label for="floatingInput">From</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input
+                    <CustomInput
                       type="number"
-                      class="form-control bg-light"
+                      classname="bg-light"
                       id="floatingInput1"
                       placeholder="To"
                     />
