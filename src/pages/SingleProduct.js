@@ -147,9 +147,10 @@ const SingleProduct = () => {
                 <div className="d-flex gap-5 align-items-center my-2">
                   <h4 className="mb-0">Quentity:</h4>
 
-                  <CustomInput
+                  <input
                     type="number"
                     name=""
+                    className="form-control"
                     min={1}
                     max={10}
                     style={{ width: "70px" }}
@@ -271,7 +272,10 @@ const SingleProduct = () => {
                     />
                   </div>
                   <div className="mb-3">
-                    <label htmlFor="formGroupExampleInput2" className="form-label">
+                    <label
+                      htmlFor="formGroupExampleInput2"
+                      className="form-label"
+                    >
                       Body of Review (1500)
                     </label>
                     <textarea
