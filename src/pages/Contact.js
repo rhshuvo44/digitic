@@ -1,10 +1,10 @@
 import React from "react";
-import Meta from "../components/Meta";
-import BrandCrumb from "../components/BrandCrumb";
 import { AiOutlineHome, AiOutlineMail } from "react-icons/ai";
 import { BiInfoCircle, BiPhoneCall } from "react-icons/bi";
+import BrandCrumb from "../components/BrandCrumb";
 import Container from "../components/Container";
 import CustomInput from "../components/CustomInput";
+import Meta from "../components/Meta";
 const Contact = () => {
   return (
     <>
@@ -30,42 +30,42 @@ const Contact = () => {
                 <div className="col-6 px-4">
                   <h3 className="contact-title">Contact</h3>
                   <form className="mt-4">
-                    <div class="form-floating mb-3">
+                    <div className="form-floating mb-3">
                       <CustomInput
                         type="text"
                         classname="bg-light"
                         id="floatingInput"
                         placeholder="Name"
                       />
-                      <label for="floatingInput">Name</label>
+                      <label htmlFor="floatingInput">Name</label>
                     </div>
-                    <div class="form-floating mb-3">
+                    <div className="form-floating mb-3">
                       <CustomInput
                         type="email"
                         classname="bg-light"
                         id="floatingInput"
                         placeholder="Email"
                       />
-                      <label for="floatingInput">Email</label>
+                      <label htmlFor="floatingInput">Email</label>
                     </div>
-                    <div class="form-floating mb-3">
+                    <div className="form-floating mb-3">
                       <CustomInput
                         type="tel"
                         classname="bg-light"
                         id="floatingInput"
                         placeholder="Number"
                       />
-                      <label for="floatingInput">Phone number</label>
+                      <label htmlFor="floatingInput">Phone number</label>
                     </div>
-                    <div class="form-floating mb-3">
+                    <div className="form-floating mb-3">
                       <textarea
                         rows="20"
-                        class="form-control bg-light"
+                        className="form-control bg-light"
                         id="floatingInput"
                         placeholder="Comment"
                         style={{ height: "100px" }}
                       />
-                      <label for="floatingInput">Comment</label>
+                      <label htmlFor="floatingInput">Comment</label>
                     </div>
                     <button className="button border-0">Send</button>
                   </form>

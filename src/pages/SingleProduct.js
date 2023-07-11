@@ -6,9 +6,9 @@ import StarRatings from "react-star-ratings";
 import BrandCrumb from "../components/BrandCrumb";
 import Colors from "../components/Colors";
 import Container from "../components/Container";
+import CustomInput from "../components/CustomInput";
 import Meta from "../components/Meta";
 import ProductCard from "../components/ProductCard";
-import CustomInput from "../components/CustomInput";
 
 const SingleProduct = () => {
   const [orderProduct, setOrderProduct] = useState(true);
@@ -270,13 +270,13 @@ const SingleProduct = () => {
                       starDimension="15px"
                     />
                   </div>
-                  <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">
+                  <div className="mb-3">
+                    <label htmlFor="formGroupExampleInput2" className="form-label">
                       Body of Review (1500)
                     </label>
                     <textarea
                       rows="5"
-                      class="form-control bg-light"
+                      className="form-control bg-light"
                       id="formGroupExampleInput2"
                       placeholder="Write your comments here"
                     />

@@ -1,7 +1,7 @@
 import React from "react";
-import Meta from "../components/Meta";
 import BrandCrumb from "../components/BrandCrumb";
 import Container from "../components/Container";
+import Meta from "../components/Meta";
 
 const ShippingPolicy = () => {
   return (
@@ -11,8 +11,8 @@ const ShippingPolicy = () => {
       <Container class1="shipping-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
-            <div class="shipping-card">
-              <h5 class="shipping-title">The Standard Lorem Ipsum Passage</h5>
+            <div className="shipping-card">
+              <h5 className="shipping-title">The Standard Lorem Ipsum Passage</h5>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
                 accumsan turpis posuere cursus ultricies. Ut nunc justo,
@@ -21,7 +21,7 @@ const ShippingPolicy = () => {
                 Suspendisse aliquet sed massa in vulputate. Quisque gravida
                 suscipit tincidunt.
               </p>
-              <h5 class="shipping-title">
+              <h5 className="shipping-title">
                 At Vero Eos Et Accusamus Et Iusto Odio Dignissimos
               </h5>
               <p>
@@ -31,7 +31,7 @@ const ShippingPolicy = () => {
                 commodo diam, non viverra turpis dapibus malesuada. Duis cursus
                 metus eu sem eleifend, id rhoncus odio porttitor.
               </p>
-              <h5 class="shipping-title">
+              <h5 className="shipping-title">
                 Certain Circumstances And Owing To The Claims Of Duty Or The
                 Obligations
               </h5>
@@ -42,7 +42,7 @@ const ShippingPolicy = () => {
                 teachings of the great explorer of the truth, the master-builder
                 of human happiness. No one rejects, dislikes.
               </p>
-              <h5 class="shipping-title">
+              <h5 className="shipping-title">
                 Integer Ultrices Laoreet Nunc In Gravida
               </h5>
               <p>

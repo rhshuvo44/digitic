@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BrandCrumb from "../components/BrandCrumb";
-import Meta from "../components/Meta";
 import Container from "../components/Container";
 import CustomInput from "../components/CustomInput";
+import Meta from "../components/Meta";
 
 const Login = () => {
   return (
@@ -16,22 +16,22 @@ const Login = () => {
             <div className="auth-card">
               <h3 className="text-center">Login</h3>
               <form action="">
-                <div class="form-floating my-3">
+                <div className="form-floating my-3">
                   <CustomInput
                     type="email"
                     id="floatingInput"
                     placeholder="name@example.com"
                   />
 
-                  <label for="floatingInput">Email address</label>
+                  <label htmlFor="floatingInput">Email address</label>
                 </div>
-                <div class="form-floating mb-3">
+                <div className="form-floating mb-3">
                   <CustomInput
                     type="password"
                     id="floatingPassword"
                     placeholder="Password"
                   />
-                  <label for="floatingPassword">Password</label>
+                  <label htmlFor="floatingPassword">Password</label>
                 </div>
 
                 <div>

@@ -1,7 +1,7 @@
 import React from "react";
-import Meta from "../components/Meta";
 import BrandCrumb from "../components/BrandCrumb";
 import Container from "../components/Container";
+import Meta from "../components/Meta";
 
 const RefundPolicy = () => {
   return (
@@ -11,8 +11,8 @@ const RefundPolicy = () => {
       <Container class1="refund-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
-            <div class="refund-card">
-              <h5 class="refund-title">The Standard Lorem Ipsum Passage</h5>
+            <div className="refund-card">
+              <h5 className="refund-title">The Standard Lorem Ipsum Passage</h5>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
                 accumsan turpis posuere cursus ultricies. Ut nunc justo,
@@ -21,7 +21,7 @@ const RefundPolicy = () => {
                 Suspendisse aliquet sed massa in vulputate. Quisque gravida
                 suscipit tincidunt.
               </p>
-              <h5 class="refund-title">
+              <h5 className="refund-title">
                 At Vero Eos Et Accusamus Et Iusto Odio Dignissimos
               </h5>
               <p>
@@ -31,7 +31,7 @@ const RefundPolicy = () => {
                 commodo diam, non viverra turpis dapibus malesuada. Duis cursus
                 metus eu sem eleifend, id rhoncus odio porttitor.
               </p>
-              <h5 class="refund-title">
+              <h5 className="refund-title">
                 Certain Circumstances And Owing To The Claims Of Duty Or The
                 Obligations
               </h5>
@@ -42,7 +42,7 @@ const RefundPolicy = () => {
                 teachings of the great explorer of the truth, the master-builder
                 of human happiness. No one rejects, dislikes.
               </p>
-              <h5 class="refund-title">
+              <h5 className="refund-title">
                 Integer Ultrices Laoreet Nunc In Gravida
               </h5>
               <p>

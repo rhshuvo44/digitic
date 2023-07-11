@@ -1,9 +1,9 @@
 import React from "react";
-import Meta from "../components/Meta";
-import BrandCrumb from "../components/BrandCrumb";
 import { Link } from "react-router-dom";
+import BrandCrumb from "../components/BrandCrumb";
 import Container from "../components/Container";
 import CustomInput from "../components/CustomInput";
+import Meta from "../components/Meta";
 
 const Forgotpassword = () => {
   return (
@@ -19,13 +19,13 @@ const Forgotpassword = () => {
                 We will send you an email to reset your password
               </p>
               <form action="">
-                <div class="form-floating my-4">
+                <div className="form-floating my-4">
                   <CustomInput
                     type="email"
                     id="floatingInput"
                     placeholder="name@example.com"
                   />
-                  <label for="floatingInput">Email</label>
+                  <label htmlFor="floatingInput">Email</label>
                 </div>
 
                 <div className="d-flex flex-column gap-15 justify-content-center align-items-center mt-3">

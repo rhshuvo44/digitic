@@ -1,5 +1,4 @@
 import React from "react";
-// import StarRatingComponent from "react-star-rating-component";
 import { useState } from "react";
 import StarRatings from "react-star-ratings";
 import BrandCrumb from "../components/BrandCrumb";
@@ -11,7 +10,7 @@ import ProductCard from "../components/ProductCard";
 
 const OurStore = () => {
   const [grid, setGrid] = useState(3);
-  console.log(grid);
+
   return (
     <>
       <Meta title="Our Store - Digitic" />
@@ -62,23 +61,23 @@ const OurStore = () => {
               <div className="mt-3">
                 <h5 className="sub-title">Price</h5>
                 <div className="d-flex align-items-center gap-10">
-                  <div class="form-floating mb-3">
+                  <div className="form-floating mb-3">
                     <CustomInput
                       type="number"
                       classname="bg-light"
                       id="floatingInput"
                       placeholder="From"
                     />
-                    <label for="floatingInput">From</label>
+                    <label htmlFor="floatingInput">From</label>
                   </div>
-                  <div class="form-floating mb-3">
+                  <div className="form-floating mb-3">
                     <CustomInput
                       type="number"
                       classname="bg-light"
                       id="floatingInput1"
                       placeholder="To"
                     />
-                    <label for="floatingInput1">To</label>
+                    <label htmlFor="floatingInput1">To</label>
                   </div>
                 </div>
               </div>
@@ -224,7 +223,7 @@ const OurStore = () => {
                   </p>
                   <select
                     name="sort_by"
-                    class=" form-control form-select"
+                    className=" form-control form-select"
                     id="SortBy"
                     aria-describedby="a11y-refresh-page-message"
                   >

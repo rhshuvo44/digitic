@@ -3,8 +3,8 @@ import { BiArrowBack } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import BrandCrumb from "../components/BrandCrumb";
 import Container from "../components/Container";
-import Meta from "../components/Meta";
 import CustomInput from "../components/CustomInput";
+import Meta from "../components/Meta";
 
 const Checkout = () => {
   return (
@@ -45,9 +45,9 @@ const Checkout = () => {
                 action=""
                 className="d-flex gap-15 flex-wrap justify-content-between"
               >
-                <div class="form-floating w-100">
+                <div className="form-floating w-100">
                   <select
-                    class="form-select"
+                    className="form-select"
                     id="floatingSelect"
                     aria-label="Floating label select example"
                   >
@@ -56,11 +56,11 @@ const Checkout = () => {
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                   </select>
-                  <label for="floatingSelect">Saved addresses</label>
+                  <label htmlFor="floatingSelect">Saved addresses</label>
                 </div>
-                <div class="form-floating w-100">
+                <div className="form-floating w-100">
                   <select
-                    class="form-select"
+                    className="form-select"
                     id="floatingSelect"
                     aria-label="Floating label select example"
                   >
@@ -69,7 +69,7 @@ const Checkout = () => {
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                   </select>
-                  <label for="floatingSelect">Country/Region</label>
+                  <label htmlFor="floatingSelect">Country/Region</label>
                 </div>
                 <div className="flex-grow-1">
                   <CustomInput type="text" placeholder="First Name" />
@@ -90,9 +90,9 @@ const Checkout = () => {
                     classname="h-100"
                   />
                 </div>
-                <div class="form-floating flex-grow-1">
+                <div className="form-floating flex-grow-1">
                   <select
-                    class="form-select"
+                    className="form-select"
                     id="floatingSelect"
                     aria-label="Floating label select example"
                   >
@@ -101,7 +101,7 @@ const Checkout = () => {
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                   </select>
-                  <label for="floatingSelect">State</label>
+                  <label htmlFor="floatingSelect">State</label>
                 </div>
                 <div className="flex-grow-1">
                   <CustomInput

@@ -1,8 +1,8 @@
 import React from "react";
-import Meta from "../components/Meta";
 import BrandCrumb from "../components/BrandCrumb";
 import Container from "../components/Container";
 import CustomInput from "../components/CustomInput";
+import Meta from "../components/Meta";
 
 const Signup = () => {
   return (
@@ -15,39 +15,39 @@ const Signup = () => {
             <div className="auth-card">
               <h3 className="text-center">Create Account</h3>
               <form action="">
-                <div class="form-floating my-4">
+                <div className="form-floating my-4">
                   <CustomInput
                     type="text"
                     id="floatingInput"
                     placeholder="first name"
                   />
 
-                  <label for="floatingInput">Firts Name</label>
+                  <label htmlFor="floatingInput">Firts Name</label>
                 </div>
-                <div class="form-floating mb-4">
+                <div className="form-floating mb-4">
                   <CustomInput
                     type="text"
                     id="floatingInput"
                     placeholder="last name"
                   />
 
-                  <label for="floatingInput">Last Name</label>
+                  <label htmlFor="floatingInput">Last Name</label>
                 </div>
-                <div class="form-floating mb-4">
+                <div className="form-floating mb-4">
                   <CustomInput
                     type="email"
                     id="floatingInput"
                     placeholder="name@example.com"
                   />
-                  <label for="floatingInput">Email</label>
+                  <label htmlFor="floatingInput">Email</label>
                 </div>
-                <div class="form-floating mb-4">
+                <div className="form-floating mb-4">
                   <CustomInput
                     type="password"
                     id="floatingPassword"
                     placeholder="Password"
                   />
-                  <label for="floatingPassword">Password</label>
+                  <label htmlFor="floatingPassword">Password</label>
                 </div>
                 <div className="d-flex justify-content-center mt-4">
                   <button className="button border-0 text-capitalize">

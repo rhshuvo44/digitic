@@ -1,8 +1,8 @@
 import React from "react";
 import BrandCrumb from "../components/BrandCrumb";
-import Meta from "../components/Meta";
 import Container from "../components/Container";
 import CustomInput from "../components/CustomInput";
+import Meta from "../components/Meta";
 
 const Resetpassword = () => {
   return (
@@ -15,21 +15,21 @@ const Resetpassword = () => {
             <div className="auth-card">
               <h3 className="text-center">Reset Password</h3>
               <form action="">
-                <div class="form-floating my-3">
+                <div className="form-floating my-3">
                   <CustomInput
                     type="password"
                     id="floatingInput"
                     placeholder="password"
                   />
-                  <label for="floatingInput">Password</label>
+                  <label htmlFor="floatingInput">Password</label>
                 </div>
-                <div class="form-floating mb-3">
+                <div className="form-floating mb-3">
                   <CustomInput
                     type="password"
                     id="floatingPassword"
                     placeholder="Confrim Password"
                   />
-                  <label for="floatingPassword">Confrim Password</label>
+                  <label htmlFor="floatingPassword">Confrim Password</label>
                 </div>
 
                 <div className="d-flex justify-content-center align-items-center mt-4">
