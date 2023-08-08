@@ -6,7 +6,6 @@ import StarRatings from "react-star-ratings";
 import BrandCrumb from "../components/BrandCrumb";
 import Colors from "../components/Colors";
 import Container from "../components/Container";
-import CustomInput from "../components/CustomInput";
 import Meta from "../components/Meta";
 import ProductCard from "../components/ProductCard";
 
@@ -163,11 +162,11 @@ const SingleProduct = () => {
                   </button>
                 </div>
                 <div className="d-flex align-items-center gap-15">
-                  <a href="">
+                  <a href="y">
                     <AiOutlineHeart className="fs-5 me-2" />
                     Add to wishlist
                   </a>
-                  <a href="">
+                  <a href="y">
                     <TbGitCompare className="fs-5 me-2" />
                     Add to comnpare
                   </a>
