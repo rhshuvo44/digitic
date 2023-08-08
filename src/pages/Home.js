@@ -171,10 +171,10 @@ const Home = () => {
           <div className="col-12">
             <h2 className="section-heading">Featured Collection</h2>
           </div>
+          {/* <ProductCard />
           <ProductCard />
           <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          <ProductCard /> */}
         </div>
       </Container>
 
@@ -250,10 +250,10 @@ const Home = () => {
           </div>
           <div className="col-8">
             <div className="row">
+              {/* <ProductCard />
               <ProductCard />
               <ProductCard />
-              <ProductCard />
-              <ProductCard />
+              <ProductCard /> */}
             </div>
           </div>
         </div>

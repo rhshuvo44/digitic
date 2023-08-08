@@ -2,13 +2,31 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import StarRatings from "react-star-ratings";
 
-const ProductCard = ({ grid }) => {
+const ProductCard = ({ grid, product }) => {
+  const {
+    _id,
+    title,
+    slug,
+    description,
+    price,
+    category,
+    brand,
+    quantity,
+    sold,
+    color,
+    tags,
+    totalrating,
+    images,
+    ratings,
+    createdAt,
+    updatedAt,
+  } = product;
   let location = useLocation();
   return (
     <div
       className={`${location?.pathname === "/store" ? `col-${grid}` : "col-3"}`}
     >
-      <Link to="/product/:id" className="product-card position-relative">
+      <Link to={`/product/${_id}`} className="product-card position-relative">
         <div className="wishlist-icon position-absolute">
           <button className="border-0 bg-transparent">
             <img src="images/wish.svg" alt="" />
@@ -19,10 +37,8 @@ const ProductCard = ({ grid }) => {
           <img src="images/tab1.jpg" alt="" className="img-fluid" />
         </div>
         <div className="product-details">
-          <h6 className="brand">Apple</h6>
-          <h5 className="product-title">
-            Kids Headphones Bulk 10 Pack Multi Colored For Students
-          </h5>
+          <h6 className="brand">{brand}</h6>
+          <h5 className="product-title">{title}</h5>
           <StarRatings
             rating={3}
             starRatedColor="#ffd700"
@@ -32,12 +48,9 @@ const ProductCard = ({ grid }) => {
             starDimension="15px"
           />
           <p className="disc">
-            "At vero eos et accusamus et iusto odio dignissimos ducimus qui
-            blanditiis praesentium voluptatum deleniti atque corrupti quos
-            dolores et quas molestias excepturi sint occaecati cupiditate non
-            provident, similique sunt...
+            {description}
           </p>
-          <p className="price">$100.00</p>
+          <p className="price">${price}</p>
         </div>
         <div className="action-bar position-absolute">
           <div className="d-flex flex-column gap-15">

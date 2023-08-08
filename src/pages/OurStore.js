@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import StarRatings from "react-star-ratings";
 import BrandCrumb from "../components/BrandCrumb";
@@ -7,9 +7,17 @@ import Container from "../components/Container";
 import CustomInput from "../components/CustomInput";
 import Meta from "../components/Meta";
 import ProductCard from "../components/ProductCard";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllProducts } from "../features/products/productSlice";
 
 const OurStore = () => {
   const [grid, setGrid] = useState(3);
+  const dispatch = useDispatch();
+  const productState = useSelector((state) => state?.products?.products);
+
+  useEffect(() => {
+    dispatch(getAllProducts());
+  }, [dispatch]);
 
   return (
     <>
@@ -227,10 +235,8 @@ const OurStore = () => {
                     id="SortBy"
                     aria-describedby="a11y-refresh-page-message"
                   >
+                    <option defaultValue="best-selling">Best selling</option>
                     <option value="manual">Featured</option>
-                    <option value="best-selling" selected="selected">
-                      Best selling
-                    </option>
                     <option value="title-ascending">Alphabetically, A-Z</option>
                     <option value="title-descending">
                       Alphabetically, Z-A
@@ -274,12 +280,9 @@ const OurStore = () => {
               </div>
             </div>
             <div className="row products-list pb-5">
-              <ProductCard grid={grid} />
-              <ProductCard grid={grid} />
-              <ProductCard grid={grid} />
-              <ProductCard grid={grid} />
-              <ProductCard grid={grid} />
-              <ProductCard grid={grid} />
+              {productState.map((product) => (
+                <ProductCard key={product._id} product={product} grid={grid} />
+              ))}
             </div>
           </div>
         </div>
