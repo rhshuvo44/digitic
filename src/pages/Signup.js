@@ -7,7 +7,7 @@ import BrandCrumb from "../components/BrandCrumb";
 import Container from "../components/Container";
 import CustomInput from "../components/CustomInput";
 import Meta from "../components/Meta";
-import { registerUsers } from "../features/user/userSlice";
+import { registerUser } from "../features/user/userSlice";
 const SignupSchema = yup.object({
   firstname: yup.string().required("First Name is Required"),
   lastname: yup.string().required("Last Name is Required"),
@@ -31,9 +31,7 @@ const Signup = () => {
     },
     validationSchema: SignupSchema,
     onSubmit: (values) => {
-      console.log(values);
-      dispatch(registerUsers(values));
-
+      dispatch(registerUser(values));
       setTimeout(() => {
         navigate("/login");
       }, 6000);

@@ -1,52 +1,84 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { authServices } from "./userServices";
 import { toast } from "react-toastify";
-
-export const registerUsers = createAsyncThunk(
-  "auth/register-user",
-  async (userData, thunkApi) => {
-    try {
-      return await authServices.registerUser(userData);
-    } catch (error) {
-      thunkApi.rejectWithValue(error);
-    }
-  }
-);
+import { authService } from "./userServices";
 const initialState = {
   users: [],
   isError: false,
-  isSuccess: false,
   isLoading: false,
+  isSuccess: false,
   message: "",
 };
+export const loginUser = createAsyncThunk(
+  "auth/login",
+  async (user, thunkAPI) => {
+    try {
+      return await authService.login(user);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
+export const registerUser = createAsyncThunk(
+  "auth/register",
+  async (user, thunkAPI) => {
+    try {
+      return await authService.register(user);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
 export const authSlice = createSlice({
   name: "auth",
   initialState: initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(registerUsers.pending, (state) => {
+      .addCase(loginUser.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(registerUsers.fulfilled, (state, action) => {
-        state.isLoading = false;
+      .addCase(loginUser.fulfilled, (state, action) => {
         state.isError = false;
+        state.isLoading = false;
         state.isSuccess = true;
-        state.createdUsers = action.payload;
+        state.users = action.payload;
         if (state.isSuccess === true) {
-          toast.info("User Created Successfully");
+          toast.info("User logged in successfully");
         }
       })
-      .addCase(registerUsers.rejected, (state, action) => {
-        state.isLoading = false;
+      .addCase(loginUser.rejected, (state, action) => {
         state.isError = true;
         state.isSuccess = false;
         state.message = action.error;
+        state.isLoading = false;
         if (state.isError === true) {
-          toast.error(action.error);
+          toast.info(action.error);
+        }
+      })
+      .addCase(registerUser.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(registerUser.fulfilled, (state, action) => {
+        state.isError = false;
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.createdUser = action.payload;
+        state.message = "success";
+        if (state.isSuccess === true) {
+          toast.info("User Create successfully");
+        }
+      })
+      .addCase(registerUser.rejected, (state, action) => {
+        state.isError = true;
+        state.isSuccess = false;
+        state.message = action.error;
+        state.isLoading = false;
+        if (state.isError === true) {
+          toast.info(action.error);
         }
       });
   },
 });
-
 export default authSlice.reducer;

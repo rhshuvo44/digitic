@@ -1,14 +1,17 @@
+import axios from "axios";
 import { base_url } from "../../utils/axiosCongif";
 
-const axios = require("axios");
-const registerUser = async (user) => {
-  const res = await axios.post(`${base_url}user/register`, user);
-  console.log(res);
-  if (res?.data) {
-    return res?.data;
-  }
+const register = async (userData) => {
+  const response = await axios.post(`${base_url}user/register`, userData);
+  return response.data;
 };
 
-export const authServices = {
-  registerUser,
+const login = async (userData) => {
+  const response = await axios.post(`${base_url}user/login`, userData);
+  return response.data;
+};
+
+export const authService = {
+  login,
+  register,
 };
