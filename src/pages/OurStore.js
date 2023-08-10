@@ -280,7 +280,7 @@ const OurStore = () => {
               </div>
             </div>
             <div className="row products-list pb-5">
-              {productState.map((product) => (
+              {productState?.map((product) => (
                 <ProductCard key={product._id} product={product} grid={grid} />
               ))}
             </div>

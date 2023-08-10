@@ -2,10 +2,9 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 import BlogCard from "../components/BlogCard";
-import ProductCard from "../components/ProductCard";
-import SpecialProduct from "../components/SpecialProduct";
-import Meta from "../components/Meta";
 import Container from "../components/Container";
+import Meta from "../components/Meta";
+import SpecialProduct from "../components/SpecialProduct";
 import { services } from "../utils/Data";
 const Home = () => {
   return (

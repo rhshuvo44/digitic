@@ -8,10 +8,13 @@ import Colors from "../components/Colors";
 import Container from "../components/Container";
 import Meta from "../components/Meta";
 import ProductCard from "../components/ProductCard";
+import { useParams } from "react-router-dom";
 
 const SingleProduct = () => {
   const [orderProduct, setOrderProduct] = useState(true);
   const [reting, setReting] = useState(0);
+  const { id } = useParams();
+  console.log(id);
   // image magnify
   const props = {
     width: 610,
@@ -332,10 +335,10 @@ const SingleProduct = () => {
         <div className="row">
           <div className="col-12">
             <div className="row">
+              {/* <ProductCard />
               <ProductCard />
               <ProductCard />
-              <ProductCard />
-              <ProductCard />
+              <ProductCard /> */}
             </div>
           </div>
         </div>

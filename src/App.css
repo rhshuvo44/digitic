@@ -323,6 +323,9 @@ footer .input-group-text:hover {
 .product-card:hover .action-bar {
   right: 10px;
 }
+.product-card:hover .action-bar {
+  right: 10px;
+}
 .product-card .product-details h6 {
   color: var(--color-bf4800);
   font-style: 13px;
@@ -532,12 +535,12 @@ footer .input-group-text:hover {
  */
 
 .products-list .col-12 .product-card:hover .action-bar {
-  left: 23%;
+  left: 91%;
 }
 
 .products-list .col-12 .product-card .wishlist-icon {
   top: 5%;
-  left: 23%;
+  left: 96%;
 }
 .products-list .col-12 .product-card .action-bar {
   right: -23px;
