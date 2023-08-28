@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 import BlogCard from "../components/BlogCard";
@@ -6,7 +6,15 @@ import Container from "../components/Container";
 import Meta from "../components/Meta";
 import SpecialProduct from "../components/SpecialProduct";
 import { services } from "../utils/Data";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllBlogs } from "../features/blog/blogSlice";
 const Home = () => {
+  const dispatch = useDispatch();
+  const blogState = useSelector((state) => state?.blogs?.blogs);
+
+  useEffect(() => {
+    dispatch(getAllBlogs());
+  }, [dispatch]);
   return (
     <>
       <Meta title="Home - Digitic" />
@@ -298,10 +306,12 @@ const Home = () => {
           <div className="col-12">
             <h2 className="section-heading">Our Latest News</h2>
           </div>
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
+          {blogState &&
+            blogState?.map((blog, index) => {
+              if (index < 4) {
+                return <BlogCard key={blog._id} blog={blog} />;
+              }
+            })}
         </div>
       </Container>
     </>

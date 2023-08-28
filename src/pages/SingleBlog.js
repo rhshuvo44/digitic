@@ -11,7 +11,7 @@ const SingleBlog = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const blogState = useSelector((state) => state?.blogs?.singleBlog);
-  const { createdAt, description, images, title, _id } = blogState;
+  const { description, images, title } = blogState;
   useEffect(() => {
     dispatch(getABlog(id));
   }, [dispatch, id]);

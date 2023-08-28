@@ -35,9 +35,10 @@ const Blog = () => {
           </div>
           <div className="col-9">
             <div className="row blogs-list pb-5">
-              {blogState?.map((blog) => (
-                <BlogCard key={blog._id} blog={blog} />
-              ))}
+              {blogState &&
+                blogState?.map((blog) => (
+                  <BlogCard key={blog._id} blog={blog} />
+                ))}
             </div>
           </div>
         </div>
