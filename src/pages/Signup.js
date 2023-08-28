@@ -16,7 +16,7 @@ const SignupSchema = yup.object({
     .email("'Invalid email address'")
     .required("Email is Required"),
   mobile: yup.string().required("Mobile Number is Required"),
-  password: yup.string().required("password Number is Required"),
+  password: yup.string().required("password is Required"),
 });
 const Signup = () => {
   const dispatch = useDispatch();

@@ -1,25 +1,27 @@
 import React, { useEffect } from "react";
-import BrandCrumb from "../components/BrandCrumb";
-import Meta from "../components/Meta";
-import { Link, useParams } from "react-router-dom";
 import { BsArrowLeft } from "react-icons/bs";
-import Container from "../components/Container";
 import { useDispatch, useSelector } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
+import BrandCrumb from "../components/BrandCrumb";
+import Container from "../components/Container";
+import Meta from "../components/Meta";
 import { getABlog } from "../features/blog/blogSlice";
 
 const SingleBlog = () => {
-  const { id } = useParams();
+  const location = useLocation();
+
+  const getBlogIt = location.pathname.split("/")[2];
+  console.log(getBlogIt);
   const dispatch = useDispatch();
-  const blogState = useSelector((state) => state?.blogs?.singleBlog);
-  const { description, images, title } = blogState;
   useEffect(() => {
-    dispatch(getABlog(id));
-  }, [dispatch, id]);
+    dispatch(getABlog(getBlogIt));
+  }, [dispatch, getBlogIt]);
+  const blogState = useSelector((state) => state?.blogs?.singleBlog);
 
   return (
     <>
-      <Meta title={title} />
-      <BrandCrumb title={title} />
+      <Meta title={blogState?.title} />
+      <BrandCrumb title={blogState?.title} />
       <Container class1="blog-wrapper home-wrapper-2 py-5">
         <div className="row">
           <div className="col-3">
@@ -40,15 +42,15 @@ const SingleBlog = () => {
               <Link to="/blog">
                 <BsArrowLeft className="fs-4" /> Go back to blog
               </Link>
-              <h3 className="title">{title}</h3>
+              <h3 className="title">{blogState?.title}</h3>
               <img
-                src={images[0]?.url}
+                src={blogState?.images[0]?.url}
                 className="img-fluid w-100 my-4"
                 alt="blog"
               />
               <p
                 dangerouslySetInnerHTML={{
-                  __html: description,
+                  __html: blogState?.description,
                 }}
               ></p>
             </div>

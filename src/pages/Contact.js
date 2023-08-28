@@ -1,11 +1,43 @@
+import { useFormik } from "formik";
 import React from "react";
 import { AiOutlineHome, AiOutlineMail } from "react-icons/ai";
 import { BiInfoCircle, BiPhoneCall } from "react-icons/bi";
+import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
+import * as yup from "yup";
 import BrandCrumb from "../components/BrandCrumb";
 import Container from "../components/Container";
 import CustomInput from "../components/CustomInput";
 import Meta from "../components/Meta";
+import { createdContact } from "../features/contact/contactSlice";
+const SignupSchema = yup.object({
+  name: yup.string().required("Name is Required"),
+  email: yup
+    .string()
+    .email("'Invalid email address'")
+    .required("Email is Required"),
+  mobile: yup.string().required("Mobile Number is Required"),
+  comment: yup.string().required("Message is Required"),
+});
+
 const Contact = () => {
+  const dispatch = useDispatch();
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      mobile: "",
+      comment: "",
+    },
+    validationSchema: SignupSchema,
+    onSubmit: (values) => {
+      dispatch(createdContact(values));
+      formik.resetForm();
+      setTimeout(() => {
+        toast.success(" Successfullly!");
+      }, 3000);
+    },
+  });
   return (
     <>
       <Meta title="Contact - Digitic" />
@@ -29,45 +61,75 @@ const Contact = () => {
               <div className="row ">
                 <div className="col-6 px-4">
                   <h3 className="contact-title">Contact</h3>
-                  <form className="mt-4">
+                  <form className="mt-4" onSubmit={formik.handleSubmit}>
                     <div className="form-floating mb-3">
                       <CustomInput
                         type="text"
                         classname="bg-light"
-                        id="floatingInput"
                         placeholder="Name"
+                        id="name"
+                        name="name"
+                        onChange={formik.handleChange("name")}
+                        onBlur={formik.handleBlur("name")}
+                        value={formik.values.name}
                       />
-                      <label htmlFor="floatingInput">Name</label>
+                      <label htmlFor="name">Name</label>
                     </div>
+                    {formik.touched.name && formik.errors.name ? (
+                      <p className="text-danger">{formik.errors.name}</p>
+                    ) : null}
                     <div className="form-floating mb-3">
                       <CustomInput
                         type="email"
                         classname="bg-light"
-                        id="floatingInput"
+                        id="email"
                         placeholder="Email"
+                        name="email"
+                        onChange={formik.handleChange("email")}
+                        onBlur={formik.handleBlur("email")}
+                        value={formik.values.email}
                       />
                       <label htmlFor="floatingInput">Email</label>
                     </div>
+                    {formik.touched.email && formik.errors.email ? (
+                      <p className="text-danger">{formik.errors.email}</p>
+                    ) : null}
                     <div className="form-floating mb-3">
                       <CustomInput
                         type="tel"
                         classname="bg-light"
-                        id="floatingInput"
+                        id="mobile"
                         placeholder="Number"
+                        name="mobile"
+                        onChange={formik.handleChange("mobile")}
+                        onBlur={formik.handleBlur("mobile")}
+                        value={formik.values.mobile}
                       />
                       <label htmlFor="floatingInput">Phone number</label>
                     </div>
+                    {formik.touched.mobile && formik.errors.mobile ? (
+                      <p className="text-danger">{formik.errors.mobile}</p>
+                    ) : null}
                     <div className="form-floating mb-3">
                       <textarea
                         rows="20"
                         className="form-control bg-light"
-                        id="floatingInput"
+                        id="comment"
                         placeholder="Comment"
                         style={{ height: "100px" }}
+                        name="comment"
+                        onChange={formik.handleChange("comment")}
+                        onBlur={formik.handleBlur("comment")}
+                        value={formik.values.comment}
                       />
                       <label htmlFor="floatingInput">Comment</label>
                     </div>
-                    <button className="button border-0">Send</button>
+                    {formik.touched.comment && formik.errors.comment ? (
+                      <p className="text-danger">{formik.errors.comment}</p>
+                    ) : null}
+                    <button type="submit" className="button border-0">
+                      Send
+                    </button>
                   </form>
                 </div>
                 <div className="col-6 px-4">
