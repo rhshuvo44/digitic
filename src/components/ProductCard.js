@@ -42,7 +42,7 @@ const ProductCard = ({ grid, product }) => {
           </button>
         </div>
         <div className="product-img">
-          <img src={images[0].url} alt="" className="img-fluid" />
+          <img src={images[0]?.url} alt="" className="img-fluid" />
           <img src="images/tab1.jpg" alt="" className="img-fluid" />
         </div>
         <div className="product-details">

@@ -1,16 +1,17 @@
 import React, { useEffect } from "react";
-import BrandCrumb from "../components/BrandCrumb";
-import Meta from "../components/Meta";
-import Container from "../components/Container";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserWishlist } from "../features/user/userSlice";
+import BrandCrumb from "../components/BrandCrumb";
+import Container from "../components/Container";
+import Meta from "../components/Meta";
+import { getUserWish } from "../features/user/userSlice";
 
 const Wishlist = () => {
   const dispatch = useDispatch();
-  const wishlistState = useSelector((state) => state?.auth);
-  console.log(wishlistState);
+
+  const userState = useSelector((state) => state?.auth?.user);
+  console.log(userState);
   useEffect(() => {
-    dispatch(getUserWishlist());
+    dispatch(getUserWish());
   }, [dispatch]);
 
   return (

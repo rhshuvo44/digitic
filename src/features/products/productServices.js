@@ -5,11 +5,10 @@ const getallProducts = async () => {
   const responsive = await axios.get(`${base_url}product/`);
   return responsive.data;
 };
-const addToWishlist = async (prodIt) => {
-  
+const addToWishlist = async (prodId) => {
   const responsive = await axios.put(
     `${base_url}product/wishlist`,
-    { prodIt },
+    { prodId },
     config
   );
   return responsive.data;

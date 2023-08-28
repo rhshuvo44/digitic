@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BlogCard from "../components/BlogCard";
 import BrandCrumb from "../components/BrandCrumb";
 import Meta from "../components/Meta";
 import Container from "../components/Container";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllBlogs } from "../features/blog/blogSlice";
 
 const Blog = () => {
+  const dispatch = useDispatch();
+  const blogState = useSelector((state) => state?.blogs?.blogs);
+
+  useEffect(() => {
+    dispatch(getAllBlogs());
+  }, [dispatch]);
+
   return (
     <>
       <Meta title="News - Digitic" />
@@ -26,11 +35,9 @@ const Blog = () => {
           </div>
           <div className="col-9">
             <div className="row blogs-list pb-5">
-              <BlogCard />
-              <BlogCard />
-              <BlogCard />
-              <BlogCard />
-              <BlogCard />
+              {blogState?.map((blog) => (
+                <BlogCard key={blog._id} blog={blog} />
+              ))}
             </div>
           </div>
         </div>
