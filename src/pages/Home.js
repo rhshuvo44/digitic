@@ -8,11 +8,15 @@ import SpecialProduct from "../components/SpecialProduct";
 import { services } from "../utils/Data";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllBlogs } from "../features/blog/blogSlice";
+import ProductCard from "../components/ProductCard";
+import { getAllProducts } from "../features/products/productSlice";
 const Home = () => {
   const dispatch = useDispatch();
   const blogState = useSelector((state) => state?.blogs?.blogs);
+  const productState = useSelector((state) => state?.products?.products);
 
   useEffect(() => {
+    dispatch(getAllProducts());
     dispatch(getAllBlogs());
   }, [dispatch]);
   return (
@@ -178,10 +182,12 @@ const Home = () => {
           <div className="col-12">
             <h2 className="section-heading">Featured Collection</h2>
           </div>
-          {/* <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard /> */}
+          {productState &&
+            productState?.map((product, index) => {
+              if (index < 4) {
+                return <ProductCard key={product._id} product={product} />;
+              }
+            })}
         </div>
       </Container>
 
@@ -257,10 +263,12 @@ const Home = () => {
           </div>
           <div className="col-8">
             <div className="row">
-              {/* <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard /> */}
+              {productState &&
+                productState?.map((product, index) => {
+                  if (index < 4) {
+                    return <ProductCard key={product._id} product={product} />;
+                  }
+                })}
             </div>
           </div>
         </div>
