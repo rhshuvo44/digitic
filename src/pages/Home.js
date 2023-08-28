@@ -184,7 +184,7 @@ const Home = () => {
           </div>
           {productState &&
             productState?.map((product, index) => {
-              if (index < 4) {
+              if (product.tags === "featured") {
                 return <ProductCard key={product._id} product={product} />;
               }
             })}
@@ -243,10 +243,12 @@ const Home = () => {
           </div>
         </div>
         <div className="row">
-          <SpecialProduct />
-          <SpecialProduct />
-          <SpecialProduct />
-          <SpecialProduct />
+          {productState &&
+            productState?.map((product) => {
+              // if (product.tags === "special") {
+                return <SpecialProduct key={product._id} product={product} />;
+              // }
+            })}
         </div>
       </Container>
 
