@@ -23,9 +23,26 @@ export const loginUser = createAsyncThunk(
 );
 export const getUserWish = createAsyncThunk(
   "user/wishlist",
-  async ( thunkAPI) => {
+  async (thunkAPI) => {
     try {
       return await authService.getUserWishlists();
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+export const getUserCart = createAsyncThunk("user/cart", async (thunkAPI) => {
+  try {
+    return await authService.getCart();
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error);
+  }
+});
+export const addProdToCart = createAsyncThunk(
+  "user/cart/add",
+  async (cartData, thunkAPI) => {
+    try {
+      return await authService.addToCart(cartData);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
@@ -103,6 +120,39 @@ export const authSlice = createSlice({
         state.wishlist = action.payload;
       })
       .addCase(getUserWish.rejected, (state, action) => {
+        state.isSuccess = false;
+        state.isError = true;
+        state.isLoading = false;
+        state.message = action.error;
+      })
+      .addCase(addProdToCart.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(addProdToCart.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError = false;
+        state.isSuccess = true;
+        state.cartProduct = action.payload;
+        if (state.isSuccess) {
+          toast.success("Product Added to cart");
+        }
+      })
+      .addCase(addProdToCart.rejected, (state, action) => {
+        state.isSuccess = false;
+        state.isError = true;
+        state.isLoading = false;
+        state.message = action.error;
+      })
+      .addCase(getUserCart.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getUserCart.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError = false;
+        state.isSuccess = true;
+        state.cart = action.payload;
+      })
+      .addCase(getUserCart.rejected, (state, action) => {
         state.isSuccess = false;
         state.isError = true;
         state.isLoading = false;

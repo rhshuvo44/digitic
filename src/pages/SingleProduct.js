@@ -1,28 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { TbGitCompare } from "react-icons/tb";
 import ReactImageZoom from "react-image-zoom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
 import StarRatings from "react-star-ratings";
 import BrandCrumb from "../components/BrandCrumb";
 import Colors from "../components/Colors";
 import Container from "../components/Container";
 import Meta from "../components/Meta";
 import ProductCard from "../components/ProductCard";
-import { useParams } from "react-router-dom";
+import {
+  addToWishlist,
+  getAllProducts,
+  getaProduct,
+} from "../features/products/productSlice";
+import { addProdToCart } from "../features/user/userSlice";
 
 const SingleProduct = () => {
   const [orderProduct, setOrderProduct] = useState(true);
   const [reting, setReting] = useState(0);
-  const { id } = useParams();
-  console.log(id);
-  // image magnify
-  const props = {
-    width: 610,
-    height: 500,
-    zoomWidth: 610,
-    img: "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    // zoomPosition: "original",
-  };
+  const [quantity, setQuantity] = useState(1);
+  const [color, setColor] = useState("red");
 
   // text copy funcion
   const copyToClipboard = (text) => {
@@ -34,10 +33,46 @@ const SingleProduct = () => {
     document.execCommand("copy");
     textField.remove();
   };
+
+  const location = useLocation();
+  const getProductId = location.pathname.split("/")[2];
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getaProduct(getProductId));
+    dispatch(getAllProducts());
+  }, [dispatch, getProductId]);
+  const addToWish = (id) => {
+    dispatch(addToWishlist(id));
+  };
+  const productState = useSelector((state) => state?.products?.singleProduct);
+
+  const allProductState = useSelector((state) => state?.products?.products);
+
+  // image magnify
+  const props = {
+    width: 610,
+    height: 500,
+    zoomWidth: 610,
+    img: productState?.images[0]?.url
+      ? productState?.images[0]?.url
+      : "https://images.unsplash.com/photo-1523730205978-59fd1b2965e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1508&q=80",
+    zoomPosition: "original",
+  };
+  const uploadCart = () => {
+    dispatch(
+      addProdToCart({
+        productId: productState?._id,
+        price: productState?.price,
+        color,
+        quantity,
+      })
+    );
+  };
   return (
     <>
-      <Meta title={"Product Name"} />
-      <BrandCrumb title="Product Name" />
+      <Meta title={productState?.title} />
+      <BrandCrumb title={productState?.title} />
 
       <Container class1="main-product-wrapper py-5 home-wrapper-2">
         <div className="row">
@@ -46,49 +81,24 @@ const SingleProduct = () => {
               <ReactImageZoom {...props} />
             </div>
             <div className="other-product-image d-flex flex-wrap gap-15">
-              <div className="">
-                <img
-                  src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                  className="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div className="">
-                <img
-                  src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                  className="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div className="">
-                <img
-                  src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                  className="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div className="">
-                <img
-                  src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                  className="img-fluid"
-                  alt=""
-                />
-              </div>
+              {productState?.images?.map((image) => (
+                <div key={image.url}>
+                  <img src={image.url} className="img-fluid" alt="" />
+                </div>
+              ))}
             </div>
           </div>
           <div className="col-6">
             <div className="main-product-details">
               <div className="border-bottom">
-                <h3>
-                  Smart Watch With Advanced Health Monitoring, Fitness Tracking
-                </h3>
+                <h3>{productState?.title}</h3>
               </div>
               <div className="border-bottom">
-                <p className="price">$100</p>
+                <p className="price">${productState?.price}</p>
                 <div className="d-flex align-items-center gap-10">
                   <div style={{ marginBottom: "0.5rem" }}>
                     <StarRatings
-                      rating={4}
+                      rating={productState?.totalrating}
                       starRatedColor="#ffd700"
                       numberOfStars={5}
                       name="rating"
@@ -96,7 +106,7 @@ const SingleProduct = () => {
                       starDimension="15px"
                     />
                   </div>
-                  <p className="mb-0"> (2 Reviews)</p>
+                  <p className="mb-0"> ({productState?.totalrating} Reviews)</p>
                 </div>
                 <a href="#review" className="my-3">
                   Write a Review
@@ -108,14 +118,14 @@ const SingleProduct = () => {
                 </div>
                 <div className="d-flex gap-10 align-items-center">
                   <h4>Brand:</h4>
-                  <p>Havells</p>
+                  <p>{productState?.brand}</p>
                 </div>
                 <div className="d-flex gap-10 align-items-center">
-                  <h4>Categories:</h4> <p>acnbvnnvh</p>
+                  <h4>Categories:</h4> <p>{productState?.category}</p>
                 </div>
                 <div className="d-flex gap-10 align-items-center">
                   <h4>Tags:</h4>
-                  <p>watch</p>
+                  <p>{productState?.tags}</p>
                 </div>
                 <div className="d-flex gap-10 align-items-center">
                   <h4>SKU:</h4>
@@ -144,35 +154,42 @@ const SingleProduct = () => {
                 </div>
                 <div className="d-flex gap-10 flex-column">
                   <h4>Color:</h4>
-                  <Colors />
+                  <Colors setColor={setColor} colorData={productState?.color} />
                 </div>
                 <div className="d-flex gap-5 align-items-center my-2">
                   <h4 className="mb-0">Quentity:</h4>
 
                   <input
                     type="number"
-                    name=""
+                    name="quantity"
                     className="form-control"
                     min={1}
                     max={10}
                     style={{ width: "70px" }}
-                    id=""
+                    id="quantity"
                     placeholder="Qn"
+                    onChange={(e) => setQuantity(e.target.value)}
+                    value={quantity}
                   />
-                  <button className="button border-0 ">Add To Cart</button>
+                  <button
+                    className="button border-0 "
+                    onClick={() => uploadCart()}
+                  >
+                    Add To Cart
+                  </button>
                   <button className="button border-0 buy-btn">
                     buy it now
                   </button>
                 </div>
                 <div className="d-flex align-items-center gap-15">
-                  <a href="y">
+                  <Link onClick={() => addToWish(productState?._id)}>
                     <AiOutlineHeart className="fs-5 me-2" />
                     Add to wishlist
-                  </a>
-                  <a href="y">
+                  </Link>
+                  <Link>
                     <TbGitCompare className="fs-5 me-2" />
                     Add to comnpare
-                  </a>
+                  </Link>
                 </div>
                 <div className="d-flex gap-10 flex-column my-3">
                   <h4>Shipping & Returns</h4>
@@ -187,9 +204,7 @@ const SingleProduct = () => {
                   <p
                     style={{ cursor: "pointer" }}
                     onClick={() => {
-                      copyToClipboard(
-                        "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                      );
+                      copyToClipboard(window.location.href);
                     }}
                   >
                     Copy Product Link
@@ -206,22 +221,12 @@ const SingleProduct = () => {
           <div className="col-12">
             <div className="p-3">
               <h4>Description</h4>
-              <p className="bg-white p-4 rounded mt-3">
-                "At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos
-                dolores et quas molestias excepturi sint occaecati cupiditate
-                non provident, similique sunt in culpa qui officia deserunt
-                mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                rerum facilis est et expedita distinctio. Nam libero tempore,
-                cum soluta nobis est eligendi optio cumque nihil impedit quo
-                minus id quod maxime placeat facere possimus, omnis voluptas
-                assumenda est, omnis dolor repellendus. Temporibus autem
-                quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                eveniet ut et voluptates repudiandae sint et molestiae non
-                recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
-                ut aut reiciendis voluptatibus maiores alias consequatur aut
-                perferendis doloribus asperiores repellat."
-              </p>
+              <p
+                className="bg-white p-4 rounded mt-3"
+                dangerouslySetInnerHTML={{
+                  __html: productState?.description,
+                }}
+              ></p>
             </div>
           </div>
         </div>
@@ -236,14 +241,16 @@ const SingleProduct = () => {
                   <h4 className="mb-2">Customer Reviews</h4>
                   <div className="d-flex align-items-center gap-10">
                     <StarRatings
-                      rating={4}
+                      rating={productState?.totalrating}
                       starRatedColor="#ffd700"
                       numberOfStars={5}
                       name="rating"
                       starSpacing="2px"
                       starDimension="15px"
                     />
-                    <p className="mb-0">Base on 2 Reviews</p>
+                    <p className="mb-0">
+                      Base on {productState?.totalrating} Reviews
+                    </p>
                   </div>
                 </div>
                 {orderProduct && (
@@ -335,10 +342,12 @@ const SingleProduct = () => {
         <div className="row">
           <div className="col-12">
             <div className="row">
-              {/* <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard /> */}
+              {allProductState &&
+                allProductState?.map((product) => {
+                  if (product.tags === "popular") {
+                    return <ProductCard key={product._id} product={product} />;
+                  }
+                })}
             </div>
           </div>
         </div>

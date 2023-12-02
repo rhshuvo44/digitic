@@ -9,13 +9,12 @@ import { getABlog } from "../features/blog/blogSlice";
 
 const SingleBlog = () => {
   const location = useLocation();
+  const getBlogId = location.pathname.split("/")[2];
 
-  const getBlogIt = location.pathname.split("/")[2];
-  console.log(getBlogIt);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getABlog(getBlogIt));
-  }, [dispatch, getBlogIt]);
+    dispatch(getABlog(getBlogId));
+  }, [dispatch, getBlogId]);
   const blogState = useSelector((state) => state?.blogs?.singleBlog);
 
   return (
