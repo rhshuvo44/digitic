@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, { useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
@@ -183,7 +184,8 @@ const Home = () => {
             <h2 className="section-heading">Featured Collection</h2>
           </div>
           {productState &&
-            productState?.map((product, index) => {
+            // eslint-disable-next-line array-callback-return
+            productState?.map((product) => {
               if (product.tags === "featured") {
                 return <ProductCard key={product._id} product={product} />;
               }
@@ -244,6 +246,7 @@ const Home = () => {
         </div>
         <div className="row">
           {productState &&
+            // eslint-disable-next-line array-callback-return
             productState?.map((product) => {
               if (product.tags === "special") {
                 return <SpecialProduct key={product._id} product={product} />;
@@ -266,7 +269,7 @@ const Home = () => {
           <div className="col-8">
             <div className="row">
               {productState &&
-                productState?.map((product, index) => {
+                productState?.map((product) => {
                   if (product.tags === "popular") {
                     return <ProductCard key={product._id} product={product} />;
                   }

@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, { useEffect, useState } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { TbGitCompare } from "react-icons/tb";
@@ -15,14 +16,14 @@ import {
   getAllProducts,
   getaProduct,
 } from "../features/products/productSlice";
-import { addProdToCart } from "../features/user/userSlice";
+import { addProdToCart, getUserCart } from "../features/user/userSlice";
 
 const SingleProduct = () => {
   const [orderProduct, setOrderProduct] = useState(true);
   const [reting, setReting] = useState(0);
   const [quantity, setQuantity] = useState(1);
-  const [color, setColor] = useState("red");
-
+  const [color, setColor] = useState(null);
+  const [alreadyAdded, setAlreadyAdded] = useState(false);
   // text copy funcion
   const copyToClipboard = (text) => {
     console.log("text", text);
@@ -41,14 +42,23 @@ const SingleProduct = () => {
   useEffect(() => {
     dispatch(getaProduct(getProductId));
     dispatch(getAllProducts());
+    dispatch(getUserCart());
   }, [dispatch, getProductId]);
+
   const addToWish = (id) => {
     dispatch(addToWishlist(id));
   };
   const productState = useSelector((state) => state?.products?.singleProduct);
 
   const allProductState = useSelector((state) => state?.products?.products);
-
+  const userCartState = useSelector((state) => state?.products?.products);
+  useEffect(() => {
+    for (let index = 0; index < userCartState.length; index++) {
+      if (getProductId === userCartState[index]?.productId?._id) {
+        setAlreadyAdded(true);
+      }
+    }
+  }, [dispatch, getProductId]);
   // image magnify
   const props = {
     width: 610,
@@ -152,25 +162,36 @@ const SingleProduct = () => {
                     </span>
                   </div>
                 </div>
-                <div className="d-flex gap-10 flex-column">
-                  <h4>Color:</h4>
-                  <Colors setColor={setColor} colorData={productState?.color} />
-                </div>
-                <div className="d-flex gap-5 align-items-center my-2">
-                  <h4 className="mb-0">Quentity:</h4>
+                {alreadyAdded === false && (
+                  <div className="d-flex gap-10 flex-column">
+                    <h4>Color:</h4>
+                    <Colors
+                      setColor={setColor}
+                      colorData={productState?.color}
+                    />
+                  </div>
+                )}
 
-                  <input
-                    type="number"
-                    name="quantity"
-                    className="form-control"
-                    min={1}
-                    max={10}
-                    style={{ width: "70px" }}
-                    id="quantity"
-                    placeholder="Qn"
-                    onChange={(e) => setQuantity(e.target.value)}
-                    value={quantity}
-                  />
+                <div className="d-flex gap-5 align-items-center my-2">
+                  {alreadyAdded === false && (
+                    <>
+                      <h4 className="mb-0">Quentity:</h4>
+
+                      <input
+                        type="number"
+                        name="quantity"
+                        className="form-control"
+                        min={1}
+                        max={10}
+                        style={{ width: "70px" }}
+                        id="quantity"
+                        placeholder="Qn"
+                        onChange={(e) => setQuantity(e.target.value)}
+                        value={quantity}
+                      />
+                    </>
+                  )}
+
                   <button
                     className="button border-0 "
                     onClick={() => uploadCart()}

@@ -14,7 +14,7 @@ const Cart = () => {
     dispatch(getUserCart());
   }, [dispatch]);
   const allCartState = useSelector((state) => state?.auth.cart);
-
+  console.log(allCartState);
   return (
     <>
       <Meta title="Cart - Digitic" />

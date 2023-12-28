@@ -31,13 +31,16 @@ export const getUserWish = createAsyncThunk(
     }
   }
 );
-export const getUserCart = createAsyncThunk("user/cart", async (thunkAPI) => {
-  try {
-    return await authService.getCart();
-  } catch (error) {
-    return thunkAPI.rejectWithValue(error);
+export const getUserCart = createAsyncThunk(
+  "user/cart/get",
+  async (thunkAPI) => {
+    try {
+      return await authService.getCart();
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
   }
-});
+);
 export const addProdToCart = createAsyncThunk(
   "user/cart/add",
   async (cartData, thunkAPI) => {

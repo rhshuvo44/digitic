@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import BrandCrumb from "../components/BrandCrumb";
 import Container from "../components/Container";
 import Meta from "../components/Meta";
@@ -8,8 +8,7 @@ import { getUserWish } from "../features/user/userSlice";
 const Wishlist = () => {
   const dispatch = useDispatch();
 
-  const userState = useSelector((state) => state?.auth?.user);
-  console.log(userState);
+  // const userState = useSelector((state) => state?.auth?.user);
   useEffect(() => {
     dispatch(getUserWish());
   }, [dispatch]);
